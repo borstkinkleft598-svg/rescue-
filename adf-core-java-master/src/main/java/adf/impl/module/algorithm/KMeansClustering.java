@@ -12,6 +12,7 @@ import adf.core.component.module.algorithm.StaticClustering;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -37,6 +38,7 @@ public class KMeansClustering extends StaticClustering {
   private static final String KEY_CLUSTER_CENTER = "clustering.centers";
   private static final String KEY_CLUSTER_ENTITY = "clustering.entities.";
   private static final String KEY_ASSIGN_AGENT = "clustering.assign";
+  private static final long RANDOM_SEED = 0L;
 
   private int repeatPrecompute;
   private int repeatPreparate;
@@ -204,28 +206,15 @@ public class KMeansClustering extends StaticClustering {
 
   private void calcStandard(int repeat) {
     this.initShortestPath(this.worldInfo);
-    Random random = new Random();
-
-    List<StandardEntity> entityList = new ArrayList<>(this.entities);
-    this.centerList = new ArrayList<>(this.clusterSize);
-    this.clusterEntitiesList = new HashMap<>(this.clusterSize);
-
-    // init list
-    for (int index = 0; index < this.clusterSize; index++) {
-      this.clusterEntitiesList.put(index, new ArrayList<>());
-      this.centerList.add(index, entityList.get(0));
+    List<StandardEntity> entityList = this.initializeClusterState();
+    if (this.clusterSize == 0) {
+      this.storeClusterResults();
+      return;
     }
+
     System.out.println("[" + this.getClass().getSimpleName() + "] Cluster : "
         + this.clusterSize);
-    // init center
-    for (int index = 0; index < this.clusterSize; index++) {
-      StandardEntity centerEntity;
-      do {
-        centerEntity = entityList
-            .get(Math.abs(random.nextInt()) % entityList.size());
-      } while (this.centerList.contains(centerEntity));
-      this.centerList.set(index, centerEntity);
-    }
+    this.initializeCenters(entityList);
     // calc center
     for (int i = 0; i < repeat; i++) {
       this.clusterEntitiesList.clear();
@@ -238,16 +227,20 @@ public class KMeansClustering extends StaticClustering {
         this.clusterEntitiesList.get(this.centerList.indexOf(tmp)).add(entity);
       }
       for (int index = 0; index < this.clusterSize; index++) {
+        List<StandardEntity> clusterEntities = this.clusterEntitiesList.get(index);
+        if (clusterEntities.isEmpty()) {
+          continue;
+        }
         int sumX = 0, sumY = 0;
-        for (StandardEntity entity : this.clusterEntitiesList.get(index)) {
+        for (StandardEntity entity : clusterEntities) {
           Pair<Integer, Integer> location = this.worldInfo.getLocation(entity);
           sumX += location.first();
           sumY += location.second();
         }
-        int centerX = sumX / this.clusterEntitiesList.get(index).size();
-        int centerY = sumY / this.clusterEntitiesList.get(index).size();
+        int centerX = sumX / clusterEntities.size();
+        int centerY = sumY / clusterEntities.size();
         StandardEntity center = this.getNearEntityByLine(this.worldInfo,
-            this.clusterEntitiesList.get(index), centerX, centerY);
+            clusterEntities, centerX, centerY);
         if (center instanceof Area) {
           this.centerList.set(index, center);
         } else if (center instanceof Human) {
@@ -288,45 +281,27 @@ public class KMeansClustering extends StaticClustering {
       List<StandardEntity> ambulanceteamList = new ArrayList<>(
           this.worldInfo.getEntitiesOfType(StandardEntityURN.AMBULANCE_TEAM));
 
+      this.sortByEntityID(firebrigadeList);
+      this.sortByEntityID(policeforceList);
+      this.sortByEntityID(ambulanceteamList);
       this.assignAgents(this.worldInfo, firebrigadeList);
       this.assignAgents(this.worldInfo, policeforceList);
       this.assignAgents(this.worldInfo, ambulanceteamList);
     }
 
-    this.centerIDs = new ArrayList<>();
-    for (int i = 0; i < this.centerList.size(); i++) {
-      this.centerIDs.add(i, this.centerList.get(i).getID());
-    }
-    for (int index = 0; index < this.clusterSize; index++) {
-      List<StandardEntity> entities = this.clusterEntitiesList.get(index);
-      List<EntityID> list = new ArrayList<>(entities.size());
-      for (int i = 0; i < entities.size(); i++) {
-        list.add(i, entities.get(i).getID());
-      }
-      this.clusterEntityIDsList.add(index, list);
-    }
+    this.storeClusterResults();
   }
 
 
   private void calcPathBased(int repeat) {
     this.initShortestPath(this.worldInfo);
-    Random random = new Random();
-    List<StandardEntity> entityList = new ArrayList<>(this.entities);
-    this.centerList = new ArrayList<>(this.clusterSize);
-    this.clusterEntitiesList = new HashMap<>(this.clusterSize);
+    List<StandardEntity> entityList = this.initializeClusterState();
+    if (this.clusterSize == 0) {
+      this.storeClusterResults();
+      return;
+    }
 
-    for (int index = 0; index < this.clusterSize; index++) {
-      this.clusterEntitiesList.put(index, new ArrayList<>());
-      this.centerList.add(index, entityList.get(0));
-    }
-    for (int index = 0; index < this.clusterSize; index++) {
-      StandardEntity centerEntity;
-      do {
-        centerEntity = entityList
-            .get(Math.abs(random.nextInt()) % entityList.size());
-      } while (this.centerList.contains(centerEntity));
-      this.centerList.set(index, centerEntity);
-    }
+    this.initializeCenters(entityList);
     for (int i = 0; i < repeat; i++) {
       this.clusterEntitiesList.clear();
       for (int index = 0; index < this.clusterSize; index++) {
@@ -338,19 +313,23 @@ public class KMeansClustering extends StaticClustering {
         this.clusterEntitiesList.get(this.centerList.indexOf(tmp)).add(entity);
       }
       for (int index = 0; index < this.clusterSize; index++) {
+        List<StandardEntity> clusterEntities = this.clusterEntitiesList.get(index);
+        if (clusterEntities.isEmpty()) {
+          continue;
+        }
         int sumX = 0, sumY = 0;
-        for (StandardEntity entity : this.clusterEntitiesList.get(index)) {
+        for (StandardEntity entity : clusterEntities) {
           Pair<Integer, Integer> location = this.worldInfo.getLocation(entity);
           sumX += location.first();
           sumY += location.second();
         }
-        int centerX = sumX / clusterEntitiesList.get(index).size();
-        int centerY = sumY / clusterEntitiesList.get(index).size();
+        int centerX = sumX / clusterEntities.size();
+        int centerY = sumY / clusterEntities.size();
 
         // this.centerList.set(index, getNearEntity(this.worldInfo,
         // this.clusterEntitiesList.get(index), centerX, centerY));
         StandardEntity center = this.getNearEntity(this.worldInfo,
-            this.clusterEntitiesList.get(index), centerX, centerY);
+            clusterEntities, centerX, centerY);
         if (center instanceof Area) {
           this.centerList.set(index, center);
         } else if (center instanceof Human) {
@@ -387,23 +366,67 @@ public class KMeansClustering extends StaticClustering {
           this.worldInfo.getEntitiesOfType(StandardEntityURN.POLICE_FORCE));
       List<StandardEntity> ambulanceTeamList = new ArrayList<>(
           this.worldInfo.getEntitiesOfType(StandardEntityURN.AMBULANCE_TEAM));
+      this.sortByEntityID(fireBrigadeList);
+      this.sortByEntityID(policeForceList);
+      this.sortByEntityID(ambulanceTeamList);
       this.assignAgents(this.worldInfo, fireBrigadeList);
       this.assignAgents(this.worldInfo, policeForceList);
       this.assignAgents(this.worldInfo, ambulanceTeamList);
     }
 
-    this.centerIDs = new ArrayList<>();
-    for (int i = 0; i < this.centerList.size(); i++) {
-      this.centerIDs.add(i, this.centerList.get(i).getID());
+    this.storeClusterResults();
+  }
+
+
+  private List<StandardEntity> initializeClusterState() {
+    List<StandardEntity> entityList = new ArrayList<>();
+    if (this.entities != null) {
+      entityList.addAll(this.entities);
     }
+    this.sortByEntityID(entityList);
+
+    this.clusterSize = Math.min(Math.max(this.clusterSize, 0), entityList.size());
+    this.centerList = new ArrayList<>(this.clusterSize);
+    this.clusterEntitiesList = new HashMap<>(this.clusterSize);
+    this.clusterEntityIDsList.clear();
+    for (int index = 0; index < this.clusterSize; index++) {
+      this.clusterEntitiesList.put(index, new ArrayList<>());
+    }
+    return entityList;
+  }
+
+
+  private void initializeCenters(List<StandardEntity> entityList) {
+    Random random = new Random(RANDOM_SEED);
+    for (int index = 0; index < this.clusterSize; index++) {
+      StandardEntity centerEntity;
+      do {
+        centerEntity = entityList.get(random.nextInt(entityList.size()));
+      } while (this.centerList.contains(centerEntity));
+      this.centerList.add(centerEntity);
+    }
+  }
+
+
+  private void storeClusterResults() {
+    this.centerIDs = new ArrayList<>(this.centerList.size());
+    for (int i = 0; i < this.centerList.size(); i++) {
+      this.centerIDs.add(this.centerList.get(i).getID());
+    }
+    this.clusterEntityIDsList.clear();
     for (int index = 0; index < this.clusterSize; index++) {
       List<StandardEntity> entities = this.clusterEntitiesList.get(index);
-      List<EntityID> list = new ArrayList<>(entities.size());
-      for (int i = 0; i < entities.size(); i++) {
-        list.add(i, entities.get(i).getID());
+      List<EntityID> ids = new ArrayList<>(entities.size());
+      for (StandardEntity entity : entities) {
+        ids.add(entity.getID());
       }
-      this.clusterEntityIDsList.add(index, list);
+      this.clusterEntityIDsList.add(ids);
     }
+  }
+
+
+  private void sortByEntityID(List<StandardEntity> entityList) {
+    entityList.sort(Comparator.comparingInt(entity -> entity.getID().getValue()));
   }
 
 
