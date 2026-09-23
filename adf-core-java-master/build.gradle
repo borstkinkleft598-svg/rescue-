@@ -1,0 +1,117 @@
+plugins {
+  id 'java-library'
+  id 'maven-publish'
+}
+
+defaultTasks 'build'
+
+group = 'com.github.roborescue'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+version = '5.0'
+
+def getDateTime() {
+  new Date().format('yyyyMMddHHmmss', TimeZone.getTimeZone('UTC'))
+}
+
+dependencies {
+  implementation 'com.github.roborescue:rcrs-server:master-SNAPSHOT'
+
+  implementation 'com.fasterxml.jackson.core:jackson-annotations:2.13.0'
+  implementation 'com.fasterxml.jackson.core:jackson-core:2.13.0'
+  implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.0'
+  implementation 'com.google.code.findbugs:jsr305:3.0.2'
+  //implementation 'com.google.common:google-collect:0.5'
+  implementation 'com.google.guava:guava:33.5.0-jre'
+  implementation 'javax.activation:activation:1.1.1'
+  implementation 'javax.xml.bind:jaxb-api:2.4.0-b180830.0359'
+  implementation 'log4j:log4j:1.2.17'
+  implementation 'org.msgpack:jackson-dataformat-msgpack:0.9.0'
+
+  testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+  testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+repositories {
+  mavenCentral()
+
+  maven {
+    url = 'https://sourceforge.net/projects/jsi/files/m2_repo'
+  }
+  maven {
+    url = 'https://repo.enonic.com/public/'
+  }
+  maven {
+    url = 'https://jitpack.io'
+  }
+}
+
+test {
+  useJUnitPlatform()
+}
+
+jar {
+  manifest {
+    attributes 'Main-Class': 'adf.core.Main'
+    attributes 'Build-Timestamp': getDateTime();
+  }
+  archiveFileName = 'adf-core.jar'
+}
+
+javadoc {
+  options {
+    encoding = 'UTF-8'
+    addStringOption('Xdoclint:none', '-quiet')
+  }
+}
+
+publishing {
+  publications {
+    maven(MavenPublication) {
+      groupId = 'com.github.roborescue'
+      artifactId = 'adf-core-java'
+      version = 'master-SNAPSHOT'
+
+      from components.java
+    }
+  }
+}
+
+clean{
+  doFirst {
+    delete file( new File( rootDir, 'bin' ) )
+    delete file( new File( rootDir, 'build' ) )
+  }
+}
+
+[compileJava, compileTestJava].each {
+  it.options.encoding = 'UTF-8'
+  it.options.compilerArgs += [ '-Xlint:unchecked', '-Xlint:deprecation' ]
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+  archiveClassifier = 'javadoc'
+  from javadoc.destinationDir
+  archiveFileName = 'adf-core-javadoc.jar'
+}
+
+task sourcesJar(type: Jar, dependsOn: classes) {
+  archiveClassifier = 'sources'
+  from sourceSets.main.allSource
+  archiveFileName = 'adf-core-sources.jar'
+}
+
+assemble.dependsOn sourcesJar
+assemble.dependsOn javadocJar
+
+task start (type: JavaExec) {
+  classpath = sourceSets.main.runtimeClasspath
+  mainClass = 'adf.core.Main'
+  if (project.hasProperty('args')) {
+    args project.args.split('\\s+')
+  }
+  jvmArgs '-Xms512m', '-Xmx8g'
+}

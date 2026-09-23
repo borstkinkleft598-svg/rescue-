@@ -1,0 +1,331 @@
+package maps.convert.osm2gml;
+
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.ListIterator;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Objects;
+import java.util.Set;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.HashMap;
+
+import java.awt.geom.Rectangle2D;
+import java.awt.geom.Path2D;
+import java.awt.geom.Area;
+import java.awt.Shape;
+import java.util.concurrent.atomic.AtomicLong;
+
+import lombok.Getter;
+import maps.convert.osm2gml.debug.Polygonal;
+import rescuecore2.misc.geometry.Line2D;
+import rescuecore2.misc.geometry.Point2D;
+
+import maps.gml.GMLCoordinates;
+import maps.gml.GMLTools;
+
+/**
+ * Abstract base class for temporary data structures during conversion.
+ */
+public abstract class TemporaryObject implements SpatialIndexable, Polygonal {
+    private static final AtomicLong ID_GENERATOR = new AtomicLong(1);
+
+    @Getter
+    private final long id;
+    private final List<DirectedEdge> edges;
+    private final Map<DirectedEdge, TemporaryObject> neighbours;
+
+    // The following properties are cached for performance.
+    private Path2D path;
+    private Rectangle2D bounds;
+
+    protected TemporaryObject(List<DirectedEdge> edges) {
+        if (edges.isEmpty()) {
+            throw new IllegalArgumentException("edges must not be empty");
+        }
+
+        this.id = ID_GENERATOR.getAndIncrement();
+        this.edges = new ArrayList<>(edges);
+        this.neighbours = new HashMap<>();
+    }
+
+    /**
+     * Returns the edges of this object.
+     *
+     * @return the edges
+     */
+    public List<DirectedEdge> getEdges() {
+        return Collections.unmodifiableList(edges);
+    }
+
+    /**
+     * Returns the nodes of this object.
+     *
+     * @return the nodes
+     */
+    public List<Node> getNodes() {
+        final List<Node> nodes = new ArrayList<>();
+        if (edges.isEmpty()) return Collections.unmodifiableList(nodes);
+
+        // Collect the start node of each edge; this covers all vertices without duplication.
+        final Node first = edges.getFirst().getStartNode();
+        for (final DirectedEdge edge : edges) {
+            final Node start = edge.getStartNode();
+            if (!start.equals(first) || nodes.isEmpty()) nodes.add(start);
+        }
+
+        return Collections.unmodifiableList(nodes);
+    }
+
+    /**
+     * Returns the neighbor through the specified edge.
+     *
+     * @param edge the edge
+     * @return the neighbor through the edge, or {@code null} if there is no neighbor
+     */
+    public TemporaryObject getNeighbor(DirectedEdge edge) {
+        return neighbours.get(edge);
+    }
+
+    /**
+     * Sets the neighbor through the specified edge.
+     *
+     * @param edge the edge
+     * @param neighbour the neighbor
+     */
+    public void setNeighbor(DirectedEdge edge, TemporaryObject neighbour) {
+        neighbours.put(edge, neighbour);
+    }
+
+    /**
+     * Sets the neighbor through the specified edge.
+     *
+     * @param edge the edge
+     * @param neighbour the neighbor
+     */
+    public void setNeighbor(Edge edge, TemporaryObject neighbour) {
+        neighbours.put(findDirectedEdge(edge), neighbour);
+    }
+
+    private DirectedEdge findDirectedEdge(Edge e) {
+        for (DirectedEdge next : edges) {
+            if (next.getEdge().equals(e)) {
+                return next;
+            }
+        }
+        throw new IllegalArgumentException("Edge " + e + " not found");
+    }
+
+    /**
+     * Returns the GML coordinates of this object.
+     *
+     * @return the GML coordinates
+     */
+    public List<GMLCoordinates> makeGMLCoordinates() {
+        List<GMLCoordinates> result = new ArrayList<>();
+        for (DirectedEdge next : edges) {
+            Point2D p = next.getStartCoordinates();
+            result.add(new GMLCoordinates(p.getX(), p.getY()));
+        }
+        return result;
+    }
+
+    /**
+     * Returns the shape of this object.
+     *
+     * @return the shape
+     */
+    public Shape getShape() {
+        if (path == null) {
+            path = new Path2D.Double();
+            Iterator<DirectedEdge> it = edges.iterator();
+            DirectedEdge d = it.next();
+            path.moveTo(d.getStartCoordinates().getX(), d.getStartCoordinates().getY());
+            path.lineTo(d.getEndCoordinates().getX(), d.getEndCoordinates().getY());
+            while (it.hasNext()) {
+                d = it.next();
+                path.lineTo(d.getEndCoordinates().getX(), d.getEndCoordinates().getY());
+            }
+        }
+        return path;
+    }
+
+    /**
+     * Returns whether this object is a duplicate of the specified object.
+     *
+     * @param other the object to test
+     * @return {@code true} if this object is a duplicate of the specified object;
+     *         {@code false} otherwise
+     */
+    public boolean isDuplicate(TemporaryObject other) {
+        List<DirectedEdge> myEdges = getEdges();
+        List<DirectedEdge> otherEdges = other.getEdges();
+        if (myEdges.size() != otherEdges.size()) {
+            return false;
+        }
+        Iterator<DirectedEdge> it = myEdges.iterator();
+        DirectedEdge start = it.next();
+        // See if we can find an equivalent edge in other
+        Iterator<DirectedEdge> ix = otherEdges.iterator();
+        DirectedEdge otherStart = null;
+        while (ix.hasNext()) {
+            DirectedEdge test = ix.next();
+            if (test.equals(start)) {
+                // Found!
+                otherStart = test;
+                break;
+            }
+        }
+        if (otherStart == null) {
+            // Edge not found in other so can't be a duplicate
+            return false;
+        }
+        // Check that edges are equivalent
+        // Walk through the edge lists starting at the beginning for me and at the equivalent edge in others. When we reach the end of other go back to the start.
+        while (ix.hasNext()) {
+            DirectedEdge a = it.next();
+            DirectedEdge b = ix.next();
+            if (!a.equals(b)) {
+                return false;
+            }
+        }
+        ix = otherEdges.iterator();
+        while (it.hasNext()) {
+            DirectedEdge a = it.next();
+            DirectedEdge b = ix.next();
+            if (!a.equals(b)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    /**
+     * Returns whether this object is entirely inside the specified object.
+     *
+     * @param other the other to test
+     * @return {@code true} if this object is entirely inside the specified object;
+     *         {@code false} otherwise
+     */
+    public boolean isEntirelyInside(TemporaryObject other) {
+        if (!this.getBounds().intersects(other.getBounds())) {
+            return false;
+        }
+        Area a = new Area(getShape());
+        Area b = new Area(other.getShape());
+        Area intersection = new Area(a);
+        intersection.intersect(b);
+        return a.equals(intersection);
+    }
+
+    /**
+     * Returns the edges of this object as lines.
+     *
+     * @return the edges of this object as lines
+     */
+    public List<Line2D> getLines() {
+        List<Line2D> lines = new ArrayList<>();
+        if (edges.isEmpty()) return Collections.unmodifiableList(lines);
+        for (DirectedEdge edge : edges) {
+            lines.add(edge.getLine());
+        }
+        return Collections.unmodifiableList(lines);
+    }
+
+    /**
+     * Returns a copy of this object with the specified edges.
+     *
+     * @param edges the edges
+     * @return a copy of this object with the specified edges
+     */
+    public abstract TemporaryObject copyWithEdges(List<DirectedEdge> edges);
+
+    // Replace the specified edge with the specified replacement edges.
+    protected void replaceEdge(Edge edge, Collection<Edge> replacements) {
+        if (replacements.isEmpty()) {
+            // Just remove the edge
+            edges.removeIf(next -> next.getEdge().equals(edge));
+        }
+        else {
+            for (ListIterator<DirectedEdge> it = edges.listIterator(); it.hasNext();) {
+                DirectedEdge next = it.next();
+                if (next.getEdge().equals(edge)) {
+                    it.remove();
+                    Set<Edge> replacementsSet = new HashSet<>(replacements);
+                    // Create directed edges for the replacements
+                    Node start = next.getStartNode();
+                    Node end = next.getEndNode();
+                    while (!start.equals(end)) {
+                        DirectedEdge newEdge = findNewEdge(start, replacementsSet);
+                        replacementsSet.remove(Objects.requireNonNull(newEdge).getEdge());
+                        it.add(newEdge);
+                        start = newEdge.getEndNode();
+                    }
+                    break;
+                }
+            }
+        }
+        bounds = null;
+        path = null;
+    }
+
+    private DirectedEdge findNewEdge(Node from, Set<Edge> candidates) {
+        for (Edge next : candidates) {
+            if (next.getStart().equals(from)) {
+                return new DirectedEdge(next, true);
+            }
+            if (next.getEnd().equals(from)) {
+                return new DirectedEdge(next, false);
+            }
+        }
+        return null;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public Rectangle2D getBounds() {
+        if (bounds == null) {
+            bounds = GMLTools.getBounds(makeGMLCoordinates());
+        }
+        return bounds;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public List<Point2D> getVertices() {
+        final List<Point2D> vertices = new ArrayList<>();
+        if (edges.isEmpty()) return Collections.unmodifiableList(vertices);
+
+        // Add the start node of each edge: the last edge's and equal the first's start,
+        // so adding it explicitly closes the polygon without duplication.
+        for (final DirectedEdge edge : edges) {
+            vertices.add(edge.getStartCoordinates());
+        }
+        vertices.add(edges.getFirst().getStartCoordinates());
+
+        return Collections.unmodifiableList(vertices);
+    }
+
+    @Override
+    public String toString() {
+        return getClass().getSimpleName() + "#" + id;
+    }
+
+    @Override
+    public boolean equals(final Object obj) {
+        if (this == obj) return true;
+        if (!(obj instanceof TemporaryObject other)) return false;
+        return this.id == other.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Long.hashCode(id);
+    }
+}

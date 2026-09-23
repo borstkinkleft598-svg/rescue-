@@ -1,0 +1,46 @@
+#!/bin/bash
+. $(dirname $0)/config.sh
+
+cd $LOCAL_HOMEDIR
+
+echo "syncing $1"
+case "$1" in
+    kernel)
+	$(dirname $0)/syncKernels.sh $KERNELDIR
+#	$(dirname $0)/syncClients.sh $KERNELDIR
+	;;
+	scripts)
+		$(dirname $0)/syncKernels.sh scripts
+        $(dirname $0)/syncClients.sh scripts
+	;;
+    maps)
+		$(dirname $0)/syncKernels.sh $MAPDIR
+	;;
+    code)
+	if [ ! -z "$2" ]; then
+	    $(dirname $0)/syncClients.sh $CODEDIR/$2/ $CODEDIR/$2/
+	else
+	    $(dirname $0)/syncClients.sh $CODEDIR
+	fi
+	;;
+
+    logs)
+		$(dirname $0)/gatherFromClients.sh $LOGDIR
+		$(dirname $0)/gatherFromKernels.sh $LOGDIR
+		$(dirname $0)/gatherFromKernels.sh records-logs
+	;;
+
+    all)
+		rcrsync scripts
+		rcrsync kernel
+		rcrsync logs
+		rcrsync code
+		rcrsync maps
+
+		
+
+	;;
+	*)
+	echo "usage rcrsync [all|scripts|kernel|maps|code|logs]"
+	;;
+esac

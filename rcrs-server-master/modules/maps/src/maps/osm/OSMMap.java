@@ -1,0 +1,373 @@
+package maps.osm;
+
+import org.dom4j.Document;
+import org.dom4j.DocumentHelper;
+import org.dom4j.DocumentException;
+import org.dom4j.Element;
+import org.dom4j.io.SAXReader;
+
+import java.util.*;
+
+import java.io.File;
+import java.io.IOException;
+
+/**
+   An OpenStreetMap map.
+*/
+public class OSMMap {
+
+    private Map<Long, OSMNode> nodes;
+    private Map<Long, OSMRoad> roads;
+    private Map<Long, OSMBuilding> buildings;
+
+    private boolean boundsCalculated;
+    private double minLat;
+    private double maxLat;
+    private double minLon;
+    private double maxLon;
+
+    /**
+       Construct an empty map.
+    */
+    public OSMMap() {
+        boundsCalculated = false;
+        nodes = new HashMap<>();
+        roads = new HashMap<>();
+        buildings = new HashMap<>();
+    }
+
+    /**
+       Construct a map from an XML document.
+       @param doc The document to read.
+    */
+    public OSMMap(Document doc) throws OSMException {
+        this();
+        read(doc);
+    }
+
+    /**
+       Construct a map from an XML file.
+       @param file The file to read.
+    */
+    public OSMMap(File file) throws OSMException, DocumentException, IOException {
+        this();
+        SAXReader reader = new SAXReader();
+        Document doc = reader.read(file);
+        read(doc);
+    }
+
+    /**
+       Construct a copy of an OSMMap over a bounded area.
+       @param other The map to copy.
+       @param minLat The minimum latitude of the new map.
+       @param minLon The minimum longitude of the new map.
+       @param maxLat The maximum latitude of the new map.
+       @param maxLon The maximum longitude of the new map.
+    */
+    public OSMMap(OSMMap other, double minLat, double minLon, double maxLat, double maxLon) {
+        this.minLat = minLat;
+        this.minLon = minLon;
+        this.maxLat = maxLat;
+        this.maxLon = maxLon;
+        boundsCalculated = true;
+        nodes = new HashMap<>();
+        roads = new HashMap<>();
+        buildings = new HashMap<>();
+        // Copy all nodes inside the bounds
+        for (OSMNode next : other.nodes.values()) {
+            double lat = next.getLatitude();
+            double lon = next.getLongitude();
+            long id = next.getId();
+            if (lat >= minLat && lat <= maxLat && lon >= minLon && lon <= maxLon) {
+                this.nodes.put(id, new OSMNode(id, lat, lon));
+            }
+        }
+        // Now copy the bits of roads and buildings that do not have missing nodes
+        for (OSMRoad next : other.roads.values()) {
+            List<Long> ids = new ArrayList<>(next.getNodeIDs());
+            ids.removeIf(nextID -> !nodes.containsKey(nextID));
+            if (!ids.isEmpty()) {
+                roads.put(next.getId(), new OSMRoad(next));
+            }
+        }
+        for (OSMBuilding next : other.buildings.values()) {
+            boolean allFound = true;
+            for (Long nextID : next.getNodeIDs()) {
+                if (!nodes.containsKey(nextID)) {
+                    allFound = false;
+                    break;
+                }
+            }
+            if (allFound) {
+                buildings.put(next.getId(), new OSMBuilding(next.getId(), new ArrayList<>(next.getNodeIDs())));
+            }
+        }
+    }
+
+    /**
+       Read an XML document and populate this map.
+       @param doc The document to read.
+    */
+    public void read(Document doc) throws OSMException {
+        boundsCalculated = false;
+        nodes = new HashMap<>();
+        roads = new HashMap<>();
+        buildings = new HashMap<>();
+        Element root = doc.getRootElement();
+        if (!"osm".equals(root.getName())) {
+            throw new OSMException("Invalid map file: root element must be 'osm', not " + root.getName());
+        }
+        root.elements("node").forEach(this::processNode);
+        root.elements("way").forEach(this::processWay);
+    }
+
+    /**
+       Turn this map into XML.
+       @return A new XML document.
+    */
+    public Document toXML() {
+        Element root = DocumentHelper.createElement("osm");
+        Element bounds = root.addElement("bounds");
+        calculateBounds();
+        bounds.addAttribute("minlat", String.valueOf(minLat));
+        bounds.addAttribute("maxlat", String.valueOf(maxLat));
+        bounds.addAttribute("minlon", String.valueOf(minLon));
+        bounds.addAttribute("maxlon", String.valueOf(maxLon));
+        for (OSMNode next : nodes.values()) {
+            Element node = root.addElement("node");
+            node.addAttribute("id", String.valueOf(next.getId()));
+            node.addAttribute("lat", String.valueOf(next.getLatitude()));
+            node.addAttribute("lon", String.valueOf(next.getLongitude()));
+        }
+        for (OSMRoad next : roads.values()) {
+            Element node = root.addElement("way");
+            node.addAttribute("id", String.valueOf(next.getId()));
+            for (Long nextID : next.getNodeIDs()) {
+                node.addElement("nd").addAttribute("ref", String.valueOf(nextID));
+            }
+            node.addElement("tag").addAttribute("k", "highway").addAttribute("v", "primary");
+        }
+        for (OSMBuilding next : buildings.values()) {
+            Element node = root.addElement("way");
+            node.addAttribute("id", String.valueOf(next.getId()));
+            for (Long nextID : next.getNodeIDs()) {
+                node.addElement("nd").addAttribute("ref", String.valueOf(nextID));
+            }
+            node.addElement("tag").addAttribute("k", "building").addAttribute("v", "yes");
+        }
+        return DocumentHelper.createDocument(root);
+    }
+
+    /**
+       Get the minimum longitude in this map.
+       @return The minimum longitude.
+    */
+    public double getMinLongitude() {
+        calculateBounds();
+        return minLon;
+    }
+
+    /**
+       Get the maximum longitude in this map.
+       @return The maximum longitude.
+    */
+    public double getMaxLongitude() {
+        calculateBounds();
+        return maxLon;
+    }
+
+    /**
+       Get the center longitude in this map.
+       @return The center longitude.
+    */
+    public double getCenterLongitude() {
+        calculateBounds();
+        return (maxLon + minLon) / 2;
+    }
+
+    /**
+       Get the minimum latitude in this map.
+       @return The minimum latitude.
+    */
+    public double getMinLatitude() {
+        calculateBounds();
+        return minLat;
+    }
+
+    /**
+       Get the maximum latitude in this map.
+       @return The maximum latitude.
+    */
+    public double getMaxLatitude() {
+        calculateBounds();
+        return maxLat;
+    }
+
+    /**
+       Get the center latitude in this map.
+       @return The center latitude.
+    */
+    public double getCenterLatitude() {
+        calculateBounds();
+        return (maxLat + minLat) / 2;
+    }
+
+    /**
+       Get all nodes in the map.
+       @return All nodes.
+    */
+    public Collection<OSMNode> getNodes() {
+        return new HashSet<>(nodes.values());
+    }
+
+    /**
+       Remove a node.
+       @param node The node to remove.
+    */
+    public void removeNode(OSMNode node) {
+        nodes.remove(node.getId());
+    }
+
+    /**
+       Get a node by ID.
+       @param id The ID of the node.
+       @return The node with the given ID or null.
+    */
+    public OSMNode getNode(Long id) {
+        return nodes.get(id);
+    }
+
+    /**
+       Get the nearest node to a point.
+       @param lat The latitude of the point.
+       @param lon The longitude of the point.
+       @return The nearest node.
+    */
+    public OSMNode getNearestNode(double lat, double lon) {
+        double smallest = Double.MAX_VALUE;
+        OSMNode best = null;
+        for (OSMNode next : nodes.values()) {
+            double d1 = next.getLatitude() - lat;
+            double d2 = next.getLongitude() - lon;
+            double d = (d1 * d1) + (d2 * d2);
+            if (d < smallest) {
+                best = next;
+                smallest = d;
+            }
+        }
+        return best;
+    }
+
+    /**
+       Replace a node and update all references.
+       @param old The node to replace.
+       @param replacement The replacement node.
+    */
+    public void replaceNode(OSMNode old, OSMNode replacement) {
+        for (OSMRoad r : roads.values()) {
+            r.replace(old.getId(), replacement.getId());
+        }
+        for (OSMBuilding b : buildings.values()) {
+            b.replace(old.getId(), replacement.getId());
+        }
+        removeNode(old);
+    }
+
+    /**
+       Get all roads.
+       @return All roads.
+    */
+    public Collection<OSMRoad> getRoads() {
+        return new HashSet<>(roads.values());
+    }
+
+    /**
+       Remove a road.
+       @param road The road to remove.
+    */
+    public void removeRoad(OSMRoad road) {
+        roads.remove(road.getId());
+    }
+
+    /**
+       Get all buildings.
+       @return All buildings.
+    */
+    public Collection<OSMBuilding> getBuildings() {
+        return new HashSet<>(buildings.values());
+    }
+
+    /**
+       Remove a building.
+       @param building The building to remove.
+    */
+    public void removeBuilding(OSMBuilding building) {
+        buildings.remove(building.getId());
+    }
+
+    private void calculateBounds() {
+        if (boundsCalculated) {
+            return;
+        }
+        minLat = Double.POSITIVE_INFINITY;
+        maxLat = Double.NEGATIVE_INFINITY;
+        minLon = Double.POSITIVE_INFINITY;
+        maxLon = Double.NEGATIVE_INFINITY;
+        for (OSMNode node : nodes.values()) {
+            minLat = Math.min(minLat, node.getLatitude());
+            maxLat = Math.max(maxLat, node.getLatitude());
+            minLon = Math.min(minLon, node.getLongitude());
+            maxLon = Math.max(maxLon, node.getLongitude());
+        }
+        boundsCalculated = true;
+    }
+
+    private void processNode(Element e) {
+        long id = Long.parseLong(e.attributeValue("id"));
+        double lat = Double.parseDouble(e.attributeValue("lat"));
+        double lon = Double.parseDouble(e.attributeValue("lon"));
+        OSMNode node = new OSMNode(id, lat, lon);
+        nodes.put(id, node);
+    }
+
+    private void processWay(final Element e) {
+        final long id = Long.parseLong(e.attributeValue("id"));
+
+        final List<Long> ids = new ArrayList<>();
+        for (final Element next : e.elements("nd")) {
+            final Long nextID = Long.parseLong(next.attributeValue("ref"));
+            ids.add(nextID);
+        }
+
+        // Road attributes.
+        OSMRoadType type = null;
+        int laneCount = -1;
+
+        for (final Element tag : e.elements("tag")) {
+            final String key = tag.attributeValue("k");
+            final String value = tag.attributeValue("v");
+
+            // Check if this object is a building.
+            if ("building".equals(key) && "yes".equals(value)) {
+                final OSMBuilding building = new OSMBuilding(id, ids);
+                buildings.put(id, building);
+                return;
+            }
+
+            // Check if this object is a road.
+            if ("highway".equals(key)) {
+                final Optional<OSMRoadType> typeOptional = OSMRoadType.fromTagValue(value);
+                if (typeOptional.isEmpty()) continue;
+                type = typeOptional.get();
+            }
+
+            if ("lanes".equals(key)) {
+                laneCount = Integer.parseInt(value);
+            }
+        }
+
+        if (type != null) {
+            roads.put(id, new OSMRoad(id, ids, type, laneCount));
+        }
+    }
+}
