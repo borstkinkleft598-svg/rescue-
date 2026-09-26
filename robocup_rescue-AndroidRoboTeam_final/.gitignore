@@ -1,0 +1,26 @@
+# IntelliJ Idea
+.idea/
+# Visual Studio Code
+.vscode/
+# gradle
+.gradle/
+# compile output
+/at_log/
+# 编译输出目录
+/bin/
+/build/
+# 运行日志
+/logs/
+# 预计算数据
+/precomp_data/
+# 编译生成文件
+*.class
+# *.jar
+*.bin
+*.cnd
+# 构建报告
+/build/reports/
+# 苹果
+.DS_Store
+
+/reference/
