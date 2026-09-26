@@ -1,48 +1,56 @@
 package AndroidRoboTeam.module.comm;
 
 import adf.core.agent.communication.MessageManager;
-import adf.core.agent.communication.standard.bundle.StandardMessage;
 import adf.core.agent.communication.standard.bundle.StandardMessagePriority;
 import adf.core.agent.info.AgentInfo;
 import adf.core.component.communication.CommunicationMessage;
+import rescuecore2.worldmodel.EntityID;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class SEUCommandManager {
 
-    private Map<String, CommunicationMessage> commandQueue = new HashMap<>();
+    private static final Map<Integer, SEUCommandManager> INSTANCES = new ConcurrentHashMap<>();
 
-    private Map<String, Integer> lastSentTimeMap = new HashMap<>();
+    private final Map<String, QueuedCommand> commandQueue = new HashMap<>();
+
+    private final Map<String, Integer> lastSentTimeMap = new HashMap<>();
 
     private static final int COMMAND_COOL_DOWN = 5;
 
-    public SEUCommandManager() {
+    private SEUCommandManager() {
     }
 
-    public void addCommand(CommunicationMessage message, StandardMessagePriority p) {
+    public static SEUCommandManager getInstance(EntityID agentID) {
+        if (agentID == null) {
+            throw new IllegalArgumentException("agentID must not be null");
+        }
+        return INSTANCES.computeIfAbsent(agentID.getValue(), id -> new SEUCommandManager());
+    }
+
+    public synchronized void addCommand(CommunicationMessage message, StandardMessagePriority priority) {
         if (message == null)
             return;
 
         String key = generateCommandKey(message);
-
-        if (commandQueue.containsKey(key)) {
-            CommunicationMessage existing = commandQueue.get(key);
-            if (getPriorityValue(message, p) > getPriorityValue(existing, p)) {
-                commandQueue.put(key, message);
-            }
-        } else {
-            commandQueue.put(key, message);
+        QueuedCommand existing = commandQueue.get(key);
+        if (existing == null || getPriorityValue(priority) > getPriorityValue(existing.priority())) {
+            commandQueue.put(key, new QueuedCommand(message, priority));
         }
     }
 
-    public void flush(AgentInfo agentInfo, MessageManager messageManager) {
+    public synchronized void flush(AgentInfo agentInfo, MessageManager messageManager) {
         int currentTime = agentInfo.getTime();
 
-        for (Map.Entry<String, CommunicationMessage> entry : commandQueue.entrySet()) {
+        for (Map.Entry<String, QueuedCommand> entry : commandQueue.entrySet()) {
             String key = entry.getKey();
-            CommunicationMessage msg = entry.getValue();
+            CommunicationMessage msg = entry.getValue().message();
+            Integer lastSentTime = lastSentTimeMap.get(key);
 
-            if (currentTime - lastSentTimeMap.getOrDefault(key, -COMMAND_COOL_DOWN) >= COMMAND_COOL_DOWN) {
+            if (lastSentTime == null || currentTime < lastSentTime
+                    || currentTime - lastSentTime >= COMMAND_COOL_DOWN) {
                 messageManager.addMessage(msg);
                 lastSentTimeMap.put(key, currentTime);
             }
@@ -56,16 +64,17 @@ public class SEUCommandManager {
         return msg.getClass().getSimpleName() + "_" + msg.getCheckKey();
     }
 
-    private int getPriorityValue(CommunicationMessage msg, StandardMessagePriority p) {
-        if (msg instanceof StandardMessage) {
-
-            if (p == StandardMessagePriority.HIGH)
-                return 3;
-            if (p == StandardMessagePriority.NORMAL)
-                return 2;
-            if (p == StandardMessagePriority.LOW)
-                return 1;
+    private int getPriorityValue(StandardMessagePriority priority) {
+        if (priority == null) {
+            return 0;
         }
-        return 0;
+        return switch (priority) {
+            case HIGH -> 3;
+            case NORMAL -> 2;
+            case LOW -> 1;
+        };
+    }
+
+    private record QueuedCommand(CommunicationMessage message, StandardMessagePriority priority) {
     }
 }

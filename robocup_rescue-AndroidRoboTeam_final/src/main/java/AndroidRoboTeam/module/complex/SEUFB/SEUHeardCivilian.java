@@ -25,7 +25,7 @@ public class SEUHeardCivilian {
         this.entityID = entityID;
         this.pathPlanning = pathPlanning;
         this.messageManager = messageManager;
-        this.commandManager = new SEUCommandManager();
+        this.commandManager = SEUCommandManager.getInstance(agentInfo.getID());
     }
 
     public Set<FireBrigadeBuilding> getPossibleBuilding() {

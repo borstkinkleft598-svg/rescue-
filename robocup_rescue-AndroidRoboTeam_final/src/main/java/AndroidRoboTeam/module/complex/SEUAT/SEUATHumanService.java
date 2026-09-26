@@ -71,12 +71,11 @@ public class SEUATHumanService extends AbstractModule {
 
     @Override
     public AbstractModule updateInfo(MessageManager messageManager) {
-        if (this.messageManager == null) {
-            this.messageManager = messageManager;
-        }
+        super.updateInfo(messageManager);
         if (this.getCountUpdateInfo() >= 2) {
             return this;
         }
+        this.messageManager = messageManager;
         this.targetsCivilian.clear();
         this.notNeedBuilding.clear();
 
@@ -134,28 +133,23 @@ public class SEUATHumanService extends AbstractModule {
                 }
             }
 
-            if (changedSE instanceof FireBrigade) {
+        }
 
-                for (Civilian civilian : this.sendCivilian) {
-                    if (civilian.isBuriednessDefined() && civilian.getBuriedness() > 0
-                            && civilian.isHPDefined() && civilian.getHP() > 0) {
-
-                        messageManager.addMessage(
-                                new MessageCivilian(false, StandardMessagePriority.HIGH, civilian));
-                    }
-                }
-
-                sendCivilian.clear();
-            } else if (changedSE instanceof PoliceForce) {
-
-                for (EntityID entityID1 : this.sendCommandPolice) {
-                    messageManager.addMessage(
-                            new CommandPolice(false, StandardMessagePriority.HIGH, null,
-                                    entityID1, CommandPolice.ACTION_CLEAR));
-                }
-                this.sendCommandPolice.clear();
+        // Send after the complete change-set has been inspected. Delivery must not
+        // depend on whether a fire brigade or police force happened to be observed.
+        for (Civilian civilian : this.sendCivilian) {
+            if (civilian.isBuriednessDefined() && civilian.getBuriedness() > 0
+                    && civilian.isHPDefined() && civilian.getHP() > 0) {
+                messageManager.addMessage(new MessageCivilian(true, StandardMessagePriority.HIGH, civilian));
             }
         }
+        this.sendCivilian.clear();
+
+        for (EntityID targetArea : this.sendCommandPolice) {
+            messageManager.addMessage(new CommandPolice(true, StandardMessagePriority.HIGH, null,
+                    targetArea, CommandPolice.ACTION_CLEAR));
+        }
+        this.sendCommandPolice.clear();
 
         for (CommunicationMessage message : messageManager
                 .getReceivedMessageList(MessageCivilian.class)) {

@@ -24,18 +24,20 @@ import java.util.List;
 public class SEUMessageCoordinator extends MessageCoordinator {
 
     private SEUChannelSubscriber SEUChannelSubscriber;
-    private SEUCommandManager commandManager;
     private static int ALLOWED_TO_SEND_DISTANCE_THRESHOLD = 10000;
 
     public SEUMessageCoordinator() {
         this.SEUChannelSubscriber = new SEUChannelSubscriber();
-        this.commandManager = new SEUCommandManager();
     }
 
     @Override
     public void coordinate(AgentInfo agentInfo, WorldInfo worldInfo, ScenarioInfo scenarioInfo,
             MessageManager messageManager,
             ArrayList<CommunicationMessage> sendMessageList, List<List<CommunicationMessage>> channelSendMessageList) {
+
+        // Flush before classifying sendMessageList. MessageManager owns the same list,
+        // so commands queued by other modules are included in this coordination cycle.
+        SEUCommandManager.getInstance(agentInfo.getID()).flush(agentInfo, messageManager);
 
         if (SEUChannelSubscriber.getSendMessageAgentsRatio() == 0) {
             SEUChannelSubscriber.initSendMessageAgentsRatio(worldInfo, scenarioInfo);
@@ -162,7 +164,6 @@ public class SEUMessageCoordinator extends MessageCoordinator {
         channelSendMessageList.get(0).addAll(voiceMessageNormalList);
         channelSendMessageList.get(0).addAll(voiceMessageLowList);
 
-        commandManager.flush(agentInfo, messageManager);
     }
 
     protected int[] getChannelsByAgentType(StandardEntityURN agentType, AgentInfo agentInfo,

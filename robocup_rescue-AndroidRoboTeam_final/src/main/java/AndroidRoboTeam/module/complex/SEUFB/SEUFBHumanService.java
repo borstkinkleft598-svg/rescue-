@@ -69,6 +69,7 @@ public class SEUFBHumanService extends AbstractModule {
 
     @Override
     public AbstractModule updateInfo(MessageManager messageManager) {
+        super.updateInfo(messageManager);
         if (this.getCountUpdateInfo() >= 2) {
             return this;
         }
@@ -77,7 +78,18 @@ public class SEUFBHumanService extends AbstractModule {
         topLevelCivilian.clear();
         firstLevelCivilian.clear();
         secondLevelCivilian.clear();
+        removeHuman.clear();
+        sendCivilian.clear();
+        notNeedSendCivilian.clear();
         Set<EntityID> changed = this.agentInfo.getChanged().getChangedEntities();
+        Set<EntityID> ambulancePositions = new HashSet<>();
+        for (EntityID entityID : changed) {
+            StandardEntity entity = this.worldInfo.getEntity(entityID);
+            if (entity instanceof AmbulanceTeam ambulanceTeam && ambulanceTeam.isPositionDefined()) {
+                ambulancePositions.add(ambulanceTeam.getPosition());
+            }
+        }
+
         for (EntityID entityID : changed) {
             StandardEntity entity = this.worldInfo.getEntity(entityID);
             if (entity instanceof Human && !this.allHuman.containsKey(entityID)) {
@@ -90,12 +102,8 @@ public class SEUFBHumanService extends AbstractModule {
                 }
             }
             if (entity instanceof Civilian civilian) {
-                for (EntityID entityID1 : changed) {
-                    StandardEntity standardEntity = this.worldInfo.getEntity(entityID);
-                    if (standardEntity instanceof AmbulanceTeam
-                            && ((AmbulanceTeam) standardEntity).getPosition().equals(civilian.getPosition())) {
-                        this.notNeedSendCivilian.add(civilian);
-                    }
+                if (civilian.isPositionDefined() && ambulancePositions.contains(civilian.getPosition())) {
+                    this.notNeedSendCivilian.add(civilian);
                 }
                 if (civilian.isBuriednessDefined() && civilian.getBuriedness() == 0 && civilian.isDamageDefined()
                         && civilian.getDamage() > 0 && civilian.isHPDefined() && civilian.getHP() > 0) {
@@ -105,19 +113,19 @@ public class SEUFBHumanService extends AbstractModule {
                     this.sendCivilian.add(civilian);
                 }
             }
-            if (entity instanceof AmbulanceTeam) {
-                for (Civilian civilian : this.sendCivilian) {
-                    if (this.notNeedSendCivilian.contains(civilian)) {
-                        continue;
-                    }
-                    if (civilian.isBuriednessDefined() && civilian.getBuriedness() == 0 && civilian.isDamageDefined()
-                            && civilian.getDamage() > 0 && civilian.isHPDefined() && civilian.getHP() > 0) {
-                        messageManager.addMessage(new MessageCivilian(false, StandardMessagePriority.HIGH, civilian));
-                    }
-                }
-                sendCivilian.clear();
+        }
+
+        // Broadcast actionable civilians after scanning every changed entity so the
+        // result is independent of HashSet iteration order and local AT visibility.
+        for (Civilian civilian : this.sendCivilian) {
+            if (!this.notNeedSendCivilian.contains(civilian)
+                    && civilian.isBuriednessDefined() && civilian.getBuriedness() == 0
+                    && civilian.isDamageDefined() && civilian.getDamage() > 0
+                    && civilian.isHPDefined() && civilian.getHP() > 0) {
+                messageManager.addMessage(new MessageCivilian(true, StandardMessagePriority.HIGH, civilian));
             }
         }
+        this.sendCivilian.clear();
 
         for (CommunicationMessage message : messageManager
                 .getReceivedMessageList(MessageCivilian.class, MessageFireBrigade.class, MessagePoliceForce.class,
