@@ -1,5 +1,7 @@
 package AndroidRoboTeam.module.complex.SEUFB;
 
+import AndroidRoboTeam.module.complex.common.WorldHistoryPolicy;
+
 import adf.core.agent.communication.MessageManager;
 import adf.core.agent.develop.DevelopData;
 import adf.core.agent.info.AgentInfo;
@@ -32,10 +34,12 @@ public class SEUSearch extends Search {
     private SEUSearchService SEUSearchService;
     private MessageManager messageManager;
     private int stayCount = 0;
+    private final boolean keepRollbackHistory;
 
     public SEUSearch(AgentInfo ai, WorldInfo wi, ScenarioInfo si, ModuleManager moduleManager,
             DevelopData developData) {
         super(ai, wi, si, moduleManager, developData);
+        keepRollbackHistory = developData.getBoolean("World.keepRollbackHistory", false);
 
         this.unsearchedBuildingIDs = new HashSet<>();
 
@@ -197,7 +201,7 @@ public class SEUSearch extends Search {
         if (this.getCountResume() >= 2) {
             return this;
         }
-        this.worldInfo.requestRollback();
+        WorldHistoryPolicy.configure(this.worldInfo, keepRollbackHistory);
         return this;
     }
 
@@ -207,7 +211,7 @@ public class SEUSearch extends Search {
         if (this.getCountPreparate() >= 2) {
             return this;
         }
-        this.worldInfo.requestRollback();
+        WorldHistoryPolicy.configure(this.worldInfo, keepRollbackHistory);
         return this;
     }
 }

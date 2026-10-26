@@ -1,0 +1,7 @@
+allprojects {
+    afterEvaluate {
+        tasks.register('paperRuntimeClasspath') {
+            doLast { println('PAPER_RUNTIME_CP=' + configurations.runtimeClasspath.asPath) }
+        }
+    }
+}

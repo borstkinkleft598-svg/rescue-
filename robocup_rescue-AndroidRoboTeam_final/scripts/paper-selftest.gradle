@@ -1,0 +1,9 @@
+allprojects {
+    afterEvaluate {
+        tasks.register('paperProcessSelfTest', JavaExec) {
+            dependsOn testClasses
+            classpath = sourceSets.test.runtimeClasspath
+            mainClass = 'AndroidRoboTeam.module.complex.paper.PaperProcessSelfTest'
+        }
+    }
+}

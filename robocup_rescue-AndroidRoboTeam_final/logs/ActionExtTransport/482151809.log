@@ -1,0 +1,1537 @@
+2026-10-26 01:54:00,271 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 1
+2026-10-26 01:54:00,272 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:54:00,273 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 130029.0 , 50380.0
+2026-10-26 01:54:00,273 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (976)
+2026-10-26 01:54:00,273 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: null
+2026-10-26 01:54:01,673 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 2
+2026-10-26 01:54:01,673 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:54:01,673 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 130029.0 , 50380.0
+2026-10-26 01:54:01,674 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (976)
+2026-10-26 01:54:01,676 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[976, 929, 958]]
+2026-10-26 01:54:02,830 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 3
+2026-10-26 01:54:02,830 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:54:02,830 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 130029.0 , 50380.0
+2026-10-26 01:54:02,831 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (976)
+2026-10-26 01:54:02,831 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[976, 274, 279, 971, 899, 959]]
+2026-10-26 01:54:04,004 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 4
+2026-10-26 01:54:04,004 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:54:04,004 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 130029.0 , 50380.0
+2026-10-26 01:54:04,004 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (976)
+2026-10-26 01:54:04,004 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[976, 274, 279, 971, 899, 959]]
+2026-10-26 01:54:04,005 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] cannot reach : null
+2026-10-26 01:54:05,174 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 5
+2026-10-26 01:54:05,174 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:54:05,174 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 130029.0 , 50380.0
+2026-10-26 01:54:05,174 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (976)
+2026-10-26 01:54:05,174 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[976, 274, 279, 971, 899, 959]]
+2026-10-26 01:54:05,174 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] cannot reach : null
+2026-10-26 01:54:05,174 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] cannot reach : null for 1 times, start random move
+2026-10-26 01:54:05,175 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] move to middle ActionMove [usePosition=true, posX=126840, posY=59000, path=[976]]
+2026-10-26 01:54:06,320 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 6
+2026-10-26 01:54:06,320 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:54:06,321 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 130029.0 , 50380.0
+2026-10-26 01:54:06,321 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (976)
+2026-10-26 01:54:06,321 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=true, posX=126840, posY=59000, path=[976]]
+2026-10-26 01:54:06,321 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] randomArea: 951
+2026-10-26 01:54:06,321 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] then, try to random walk
+2026-10-26 01:54:07,492 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 7
+2026-10-26 01:54:07,492 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:54:07,492 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 130029.0 , 50380.0
+2026-10-26 01:54:07,492 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (976)
+2026-10-26 01:54:07,493 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[976, 951]]
+2026-10-26 01:54:07,493 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] cannot reach : null
+2026-10-26 01:54:07,493 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] cannot reach : null for 1 times, start random move
+2026-10-26 01:54:07,493 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] move to middle ActionMove [usePosition=true, posX=126840, posY=50000, path=[976]]
+2026-10-26 01:54:08,633 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 8
+2026-10-26 01:54:08,633 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:54:08,633 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 130029.0 , 50380.0
+2026-10-26 01:54:08,633 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (976)
+2026-10-26 01:54:08,634 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=true, posX=126840, posY=50000, path=[976]]
+2026-10-26 01:54:08,634 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] randomArea: 956
+2026-10-26 01:54:08,634 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] then, try to random walk
+2026-10-26 01:54:09,787 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 9
+2026-10-26 01:54:09,787 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:54:09,787 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 130029.0 , 50380.0
+2026-10-26 01:54:09,787 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (976)
+2026-10-26 01:54:09,787 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[976, 956]]
+2026-10-26 01:54:09,787 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] cannot reach : null
+2026-10-26 01:54:09,787 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] cannot reach : null for 1 times, start random move
+2026-10-26 01:54:09,787 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] move to middle ActionMove [usePosition=true, posX=126840, posY=68000, path=[976]]
+2026-10-26 01:54:10,947 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 10
+2026-10-26 01:54:10,947 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:54:10,947 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 130029.0 , 50380.0
+2026-10-26 01:54:10,947 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (976)
+2026-10-26 01:54:10,947 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=true, posX=126840, posY=68000, path=[976]]
+2026-10-26 01:54:10,947 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] randomArea: 957
+2026-10-26 01:54:10,947 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] then, try to random walk
+2026-10-26 01:54:12,135 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 11
+2026-10-26 01:54:12,136 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:54:12,136 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 130029.0 , 50380.0
+2026-10-26 01:54:12,136 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (976)
+2026-10-26 01:54:12,136 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[976, 957]]
+2026-10-26 01:54:12,136 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] cannot reach : null
+2026-10-26 01:54:12,136 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] cannot reach : null for 1 times, start random move
+2026-10-26 01:54:12,136 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] move to middle ActionMove [usePosition=true, posX=126840, posY=35000, path=[976]]
+2026-10-26 01:54:13,286 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 12
+2026-10-26 01:54:13,286 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:54:13,286 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 130029.0 , 50380.0
+2026-10-26 01:54:13,286 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (976)
+2026-10-26 01:54:13,286 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=true, posX=126840, posY=35000, path=[976]]
+2026-10-26 01:54:13,286 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] randomArea: 922
+2026-10-26 01:54:13,286 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] then, try to random walk
+2026-10-26 01:54:14,419 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 13
+2026-10-26 01:54:14,419 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:54:14,419 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 130029.0 , 50380.0
+2026-10-26 01:54:14,419 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (976)
+2026-10-26 01:54:14,419 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[976, 922]]
+2026-10-26 01:54:14,419 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] cannot reach : null
+2026-10-26 01:54:14,419 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] cannot reach : null for 1 times, start random move
+2026-10-26 01:54:14,420 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] move to middle ActionMove [usePosition=true, posX=126840, posY=28000, path=[976]]
+2026-10-26 01:54:15,563 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 14
+2026-10-26 01:54:15,563 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:54:15,563 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 130029.0 , 50380.0
+2026-10-26 01:54:15,563 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (976)
+2026-10-26 01:54:15,563 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=true, posX=126840, posY=28000, path=[976]]
+2026-10-26 01:54:15,563 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] randomArea: 919
+2026-10-26 01:54:15,563 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] then, try to random walk
+2026-10-26 01:54:16,714 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 15
+2026-10-26 01:54:16,715 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:54:16,715 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 130029.0 , 50380.0
+2026-10-26 01:54:16,715 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (976)
+2026-10-26 01:54:16,715 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[976, 919]]
+2026-10-26 01:54:16,715 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] cannot reach : null
+2026-10-26 01:54:16,715 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] cannot reach : null for 1 times, start random move
+2026-10-26 01:54:16,715 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] move to middle ActionMove [usePosition=true, posX=126840, posY=59000, path=[976]]
+2026-10-26 01:54:17,872 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 16
+2026-10-26 01:54:17,872 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:54:17,872 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 127256.0 , 57941.0
+2026-10-26 01:54:17,872 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (976)
+2026-10-26 01:54:17,872 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=true, posX=126840, posY=59000, path=[976]]
+2026-10-26 01:54:17,872 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] randomArea: 279
+2026-10-26 01:54:17,872 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] then, try to random walk
+2026-10-26 01:54:19,106 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 17
+2026-10-26 01:54:19,106 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:54:19,106 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 128032.0 , 19940.0
+2026-10-26 01:54:19,106 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (274)
+2026-10-26 01:54:19,106 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[976, 274, 279]]
+2026-10-26 01:54:20,237 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 18
+2026-10-26 01:54:20,237 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:54:20,237 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 79335.0 , 19712.0
+2026-10-26 01:54:20,237 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (971)
+2026-10-26 01:54:20,237 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[274, 279, 971, 970, 968, 251]]
+2026-10-26 01:54:21,389 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 19
+2026-10-26 01:54:21,389 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:54:21,389 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 71611.0 , 21984.0
+2026-10-26 01:54:21,389 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (971)
+2026-10-26 01:54:21,389 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[971, 970, 896]]
+2026-10-26 01:54:22,550 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 20
+2026-10-26 01:54:22,551 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:54:22,551 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 72019.0 , 21716.0
+2026-10-26 01:54:22,551 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (971)
+2026-10-26 01:54:22,551 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[971, 970, 896]]
+2026-10-26 01:54:23,779 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 21
+2026-10-26 01:54:23,779 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:54:23,779 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 68867.0 , 24794.0
+2026-10-26 01:54:23,779 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (896)
+2026-10-26 01:54:23,779 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=true, posX=57167, posY=47781, path=[971]]
+2026-10-26 01:54:25,004 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 22
+2026-10-26 01:54:25,004 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:54:25,004 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 71378.0 , 22109.0
+2026-10-26 01:54:25,004 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (970)
+2026-10-26 01:54:25,004 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[896, 970, 971, 899]]
+2026-10-26 01:54:26,139 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 23
+2026-10-26 01:54:26,139 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:54:26,139 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 70893.0 , 22280.0
+2026-10-26 01:54:26,139 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (970)
+2026-10-26 01:54:26,139 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[970, 971, 899]]
+2026-10-26 01:54:27,356 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 24
+2026-10-26 01:54:27,356 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:54:27,356 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 101379.0 , 27493.0
+2026-10-26 01:54:27,356 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Building (959)
+2026-10-26 01:54:27,356 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=true, posX=100536, posY=26888, path=[970]]
+2026-10-26 01:54:28,665 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 25
+2026-10-26 01:54:28,665 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:54:28,665 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 73849.0 , 22111.0
+2026-10-26 01:54:28,665 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (971)
+2026-10-26 01:54:28,665 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[959, 899, 971, 970, 896]]
+2026-10-26 01:54:29,799 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 26
+2026-10-26 01:54:29,800 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:54:29,800 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 72018.0 , 21716.0
+2026-10-26 01:54:29,800 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (971)
+2026-10-26 01:54:29,800 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[971, 970, 896]]
+2026-10-26 01:54:31,118 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 27
+2026-10-26 01:54:31,118 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:54:31,118 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 68894.0 , 24806.0
+2026-10-26 01:54:31,118 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (896)
+2026-10-26 01:54:31,118 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=true, posX=57195, posY=47798, path=[971]]
+2026-10-26 01:54:32,503 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 28
+2026-10-26 01:54:32,504 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:54:32,504 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 71366.0 , 22113.0
+2026-10-26 01:54:32,504 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (970)
+2026-10-26 01:54:32,504 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[896, 970, 971, 899]]
+2026-10-26 01:54:33,721 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 29
+2026-10-26 01:54:33,721 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:54:33,721 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 70893.0 , 22280.0
+2026-10-26 01:54:33,721 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (970)
+2026-10-26 01:54:33,721 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[970, 971, 899]]
+2026-10-26 01:54:34,943 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 30
+2026-10-26 01:54:34,943 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:54:34,943 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 101378.0 , 27492.0
+2026-10-26 01:54:34,943 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Building (959)
+2026-10-26 01:54:34,943 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=true, posX=100536, posY=26888, path=[970]]
+2026-10-26 01:54:36,110 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 31
+2026-10-26 01:54:36,110 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:54:36,110 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 95485.0 , 25080.0
+2026-10-26 01:54:36,110 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (899)
+2026-10-26 01:54:36,110 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[959, 899]]
+2026-10-26 01:54:37,330 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 32
+2026-10-26 01:54:37,330 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:54:37,330 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 71452.0 , 22089.0
+2026-10-26 01:54:37,330 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (970)
+2026-10-26 01:54:37,330 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[899, 971, 970, 896]]
+2026-10-26 01:54:38,477 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 33
+2026-10-26 01:54:38,477 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:54:38,477 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 70000.0 , 25352.0
+2026-10-26 01:54:38,477 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (896)
+2026-10-26 01:54:38,477 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[970, 896]]
+2026-10-26 01:54:39,659 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 34
+2026-10-26 01:54:39,659 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:54:39,660 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 69450.0 , 22408.0
+2026-10-26 01:54:39,660 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (970)
+2026-10-26 01:54:39,660 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[896, 970, 968]]
+2026-10-26 01:54:40,840 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 35
+2026-10-26 01:54:40,840 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:54:40,840 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 69450.0 , 22408.0
+2026-10-26 01:54:40,840 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (970)
+2026-10-26 01:54:40,840 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[970, 968]]
+2026-10-26 01:54:42,021 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 36
+2026-10-26 01:54:42,021 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:54:42,021 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 61470.0 , 21914.0
+2026-10-26 01:54:42,021 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (968)
+2026-10-26 01:54:42,021 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=true, posX=39643, posY=25811, path=[970]]
+2026-10-26 01:54:43,165 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 37
+2026-10-26 01:54:43,165 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:54:43,165 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 68996.0 , 22408.0
+2026-10-26 01:54:43,165 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (970)
+2026-10-26 01:54:43,165 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[968, 970, 971]]
+2026-10-26 01:54:44,383 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 38
+2026-10-26 01:54:44,383 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:54:44,383 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 89471.0 , 19922.0
+2026-10-26 01:54:44,383 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (971)
+2026-10-26 01:54:44,383 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[970, 971]]
+2026-10-26 01:54:45,694 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 39
+2026-10-26 01:54:45,694 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:54:45,694 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 131308.0 , 25000.0
+2026-10-26 01:54:45,694 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (976)
+2026-10-26 01:54:45,694 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[971, 279, 274, 976, 929, 958]]
+2026-10-26 01:54:46,827 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 40
+2026-10-26 01:54:46,827 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:54:46,827 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 94449.0 , 20281.0
+2026-10-26 01:54:46,827 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (971)
+2026-10-26 01:54:46,827 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[976, 274, 279, 971]]
+2026-10-26 01:54:47,955 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 41
+2026-10-26 01:54:47,955 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:54:47,955 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 71714.0 , 21904.0
+2026-10-26 01:54:47,955 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (971)
+2026-10-26 01:54:47,955 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[971, 970, 896]]
+2026-10-26 01:54:49,090 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 42
+2026-10-26 01:54:49,090 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:54:49,090 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 72018.0 , 21715.0
+2026-10-26 01:54:49,091 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (971)
+2026-10-26 01:54:49,091 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[971, 970, 896]]
+2026-10-26 01:54:50,226 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 43
+2026-10-26 01:54:50,226 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:54:50,226 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 68907.0 , 24814.0
+2026-10-26 01:54:50,226 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (896)
+2026-10-26 01:54:50,226 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=true, posX=57211, posY=47806, path=[971]]
+2026-10-26 01:54:51,362 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 44
+2026-10-26 01:54:51,362 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:54:51,362 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 71365.0 , 22113.0
+2026-10-26 01:54:51,362 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (970)
+2026-10-26 01:54:51,362 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[896, 970, 971, 899]]
+2026-10-26 01:54:52,498 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 45
+2026-10-26 01:54:52,498 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:54:52,498 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 70893.0 , 22280.0
+2026-10-26 01:54:52,498 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (970)
+2026-10-26 01:54:52,499 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[970, 971, 899]]
+2026-10-26 01:54:53,632 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 46
+2026-10-26 01:54:53,632 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:54:53,632 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 68463.0 , 24585.0
+2026-10-26 01:54:53,632 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (896)
+2026-10-26 01:54:53,632 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=true, posX=49524, posY=43337, path=[970]]
+2026-10-26 01:54:54,948 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 47
+2026-10-26 01:54:54,948 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:54:54,948 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 71604.0 , 21992.0
+2026-10-26 01:54:54,948 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (971)
+2026-10-26 01:54:54,948 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[896, 970, 971, 899]]
+2026-10-26 01:54:56,082 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 48
+2026-10-26 01:54:56,082 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:54:56,082 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 95381.0 , 25161.0
+2026-10-26 01:54:56,082 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (899)
+2026-10-26 01:54:56,082 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[971, 899]]
+2026-10-26 01:54:57,305 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 49
+2026-10-26 01:54:57,305 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:54:57,305 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 71457.0 , 22094.0
+2026-10-26 01:54:57,305 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (970)
+2026-10-26 01:54:57,305 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[899, 971, 970, 968]]
+2026-10-26 01:54:58,610 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 50
+2026-10-26 01:54:58,610 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:54:58,610 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 69447.0 , 22407.0
+2026-10-26 01:54:58,610 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (970)
+2026-10-26 01:54:58,610 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[970, 968]]
+2026-10-26 01:54:59,749 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 51
+2026-10-26 01:54:59,749 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:54:59,750 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 69450.0 , 22408.0
+2026-10-26 01:54:59,750 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (970)
+2026-10-26 01:54:59,750 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[970, 968]]
+2026-10-26 01:55:00,884 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 52
+2026-10-26 01:55:00,884 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:55:00,884 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 61469.0 , 21914.0
+2026-10-26 01:55:00,884 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (968)
+2026-10-26 01:55:00,884 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=true, posX=39643, posY=25811, path=[970]]
+2026-10-26 01:55:02,023 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 53
+2026-10-26 01:55:02,023 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:55:02,023 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 69424.0 , 22408.0
+2026-10-26 01:55:02,023 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (970)
+2026-10-26 01:55:02,023 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[968, 970, 896]]
+2026-10-26 01:55:03,162 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 54
+2026-10-26 01:55:03,162 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:55:03,162 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 70001.0 , 25351.0
+2026-10-26 01:55:03,162 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (896)
+2026-10-26 01:55:03,162 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[970, 896]]
+2026-10-26 01:55:04,300 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 55
+2026-10-26 01:55:04,300 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:55:04,300 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 71362.0 , 22115.0
+2026-10-26 01:55:04,300 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (970)
+2026-10-26 01:55:04,300 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[896, 970, 971, 899]]
+2026-10-26 01:55:05,443 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 56
+2026-10-26 01:55:05,443 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:55:05,443 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 70893.0 , 22280.0
+2026-10-26 01:55:05,443 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (970)
+2026-10-26 01:55:05,443 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[970, 971, 899]]
+2026-10-26 01:55:06,673 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 57
+2026-10-26 01:55:06,673 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:55:06,673 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 101378.0 , 27492.0
+2026-10-26 01:55:06,673 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Building (959)
+2026-10-26 01:55:06,673 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=true, posX=100536, posY=26888, path=[970]]
+2026-10-26 01:55:07,892 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 58
+2026-10-26 01:55:07,892 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:55:07,892 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 95485.0 , 25081.0
+2026-10-26 01:55:07,892 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (899)
+2026-10-26 01:55:07,892 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[959, 899]]
+2026-10-26 01:55:09,028 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 59
+2026-10-26 01:55:09,028 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:55:09,028 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 89542.0 , 19920.0
+2026-10-26 01:55:09,028 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (971)
+2026-10-26 01:55:09,028 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[899, 971]]
+2026-10-26 01:55:10,178 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 60
+2026-10-26 01:55:10,178 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:55:10,178 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 71630.0 , 21972.0
+2026-10-26 01:55:10,178 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (971)
+2026-10-26 01:55:10,178 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[971, 970, 896]]
+2026-10-26 01:55:11,404 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 61
+2026-10-26 01:55:11,404 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:55:11,404 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 117671.0 , 20345.0
+2026-10-26 01:55:11,404 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (274)
+2026-10-26 01:55:11,404 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[971, 279, 274, 976, 929, 958]]
+2026-10-26 01:55:12,617 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 62
+2026-10-26 01:55:12,617 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:55:12,617 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 95464.0 , 25251.0
+2026-10-26 01:55:12,617 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (899)
+2026-10-26 01:55:12,617 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[274, 279, 971, 899]]
+2026-10-26 01:55:13,753 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 63
+2026-10-26 01:55:13,753 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:55:13,753 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 71438.0 , 22089.0
+2026-10-26 01:55:13,753 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (970)
+2026-10-26 01:55:13,753 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[899, 971, 970, 896]]
+2026-10-26 01:55:14,882 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 64
+2026-10-26 01:55:14,882 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:55:14,882 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 69997.0 , 25351.0
+2026-10-26 01:55:14,882 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (896)
+2026-10-26 01:55:14,882 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[970, 896]]
+2026-10-26 01:55:16,100 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 65
+2026-10-26 01:55:16,101 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:55:16,101 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 69450.0 , 22401.0
+2026-10-26 01:55:16,101 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (970)
+2026-10-26 01:55:16,101 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[896, 970, 968]]
+2026-10-26 01:55:17,231 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 66
+2026-10-26 01:55:17,231 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:55:17,231 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 69450.0 , 22407.0
+2026-10-26 01:55:17,231 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (970)
+2026-10-26 01:55:17,232 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[970, 968]]
+2026-10-26 01:55:18,452 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 67
+2026-10-26 01:55:18,452 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:55:18,452 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 61515.0 , 21916.0
+2026-10-26 01:55:18,452 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (968)
+2026-10-26 01:55:18,452 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=true, posX=39646, posY=25835, path=[970]]
+2026-10-26 01:55:19,591 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 68
+2026-10-26 01:55:19,592 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:55:19,592 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 69436.0 , 22407.0
+2026-10-26 01:55:19,592 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (970)
+2026-10-26 01:55:19,592 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[968, 970, 896]]
+2026-10-26 01:55:20,731 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 69
+2026-10-26 01:55:20,731 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:55:20,731 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 70000.0 , 25351.0
+2026-10-26 01:55:20,731 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (896)
+2026-10-26 01:55:20,731 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[970, 896]]
+2026-10-26 01:55:21,862 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 70
+2026-10-26 01:55:21,862 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:55:21,863 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 71361.0 , 22116.0
+2026-10-26 01:55:21,863 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (970)
+2026-10-26 01:55:21,863 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[896, 970, 971, 899]]
+2026-10-26 01:55:23,005 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 71
+2026-10-26 01:55:23,005 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:55:23,005 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 70893.0 , 22280.0
+2026-10-26 01:55:23,005 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (970)
+2026-10-26 01:55:23,005 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[970, 971, 899]]
+2026-10-26 01:55:24,135 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 72
+2026-10-26 01:55:24,135 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:55:24,135 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 101378.0 , 27492.0
+2026-10-26 01:55:24,135 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Building (959)
+2026-10-26 01:55:24,136 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=true, posX=100536, posY=26888, path=[970]]
+2026-10-26 01:55:25,274 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 73
+2026-10-26 01:55:25,274 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:55:25,274 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 95485.0 , 25081.0
+2026-10-26 01:55:25,274 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (899)
+2026-10-26 01:55:25,274 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[959, 899]]
+2026-10-26 01:55:26,419 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 74
+2026-10-26 01:55:26,419 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:55:26,419 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 89542.0 , 19920.0
+2026-10-26 01:55:26,419 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (971)
+2026-10-26 01:55:26,419 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[899, 971]]
+2026-10-26 01:55:27,637 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 75
+2026-10-26 01:55:27,637 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:55:27,637 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 71630.0 , 21972.0
+2026-10-26 01:55:27,637 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (971)
+2026-10-26 01:55:27,637 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[971, 970, 896]]
+2026-10-26 01:55:28,858 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 76
+2026-10-26 01:55:28,858 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:55:28,858 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 72019.0 , 21716.0
+2026-10-26 01:55:28,858 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (971)
+2026-10-26 01:55:28,858 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[971, 970, 896]]
+2026-10-26 01:55:29,997 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 77
+2026-10-26 01:55:29,997 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:55:29,997 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 68867.0 , 24794.0
+2026-10-26 01:55:29,997 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (896)
+2026-10-26 01:55:29,997 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=true, posX=57167, posY=47781, path=[971]]
+2026-10-26 01:55:31,133 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 78
+2026-10-26 01:55:31,133 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:55:31,133 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 71383.0 , 22110.0
+2026-10-26 01:55:31,133 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (970)
+2026-10-26 01:55:31,133 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[896, 970, 971, 899]]
+2026-10-26 01:55:32,272 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 79
+2026-10-26 01:55:32,272 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:55:32,272 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 70893.0 , 22280.0
+2026-10-26 01:55:32,272 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (970)
+2026-10-26 01:55:32,272 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[970, 971, 899]]
+2026-10-26 01:55:33,408 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 80
+2026-10-26 01:55:33,408 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:55:33,409 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 101379.0 , 27498.0
+2026-10-26 01:55:33,409 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Building (959)
+2026-10-26 01:55:33,409 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=true, posX=100536, posY=26888, path=[970]]
+2026-10-26 01:55:34,728 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 81
+2026-10-26 01:55:34,728 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:55:34,728 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 95485.0 , 25080.0
+2026-10-26 01:55:34,728 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (899)
+2026-10-26 01:55:34,728 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[959, 899]]
+2026-10-26 01:55:35,860 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 82
+2026-10-26 01:55:35,860 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:55:35,860 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 71452.0 , 22089.0
+2026-10-26 01:55:35,860 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (970)
+2026-10-26 01:55:35,860 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[899, 971, 970, 896]]
+2026-10-26 01:55:36,991 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 83
+2026-10-26 01:55:36,991 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:55:36,991 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 70893.0 , 22280.0
+2026-10-26 01:55:36,991 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (970)
+2026-10-26 01:55:36,991 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[970, 971, 279, 274, 976, 929, 958]]
+2026-10-26 01:55:38,129 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 84
+2026-10-26 01:55:38,129 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:55:38,129 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 101378.0 , 27495.0
+2026-10-26 01:55:38,129 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Building (959)
+2026-10-26 01:55:38,129 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=true, posX=100536, posY=26888, path=[970]]
+2026-10-26 01:55:39,265 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 85
+2026-10-26 01:55:39,265 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:55:39,266 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 125612.0 , 20796.0
+2026-10-26 01:55:39,266 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (274)
+2026-10-26 01:55:39,266 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[959, 899, 971, 279, 274, 976, 929, 958]]
+2026-10-26 01:55:40,413 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 86
+2026-10-26 01:55:40,413 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:55:40,413 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 95988.0 , 24850.0
+2026-10-26 01:55:40,413 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (899)
+2026-10-26 01:55:40,413 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[274, 279, 971, 899]]
+2026-10-26 01:55:41,566 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 87
+2026-10-26 01:55:41,566 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:55:41,566 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 71518.0 , 22063.0
+2026-10-26 01:55:41,566 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (971)
+2026-10-26 01:55:41,566 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[899, 971, 970, 896]]
+2026-10-26 01:55:42,727 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 88
+2026-10-26 01:55:42,727 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:55:42,727 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 72020.0 , 21716.0
+2026-10-26 01:55:42,727 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (971)
+2026-10-26 01:55:42,727 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[971, 970, 896]]
+2026-10-26 01:55:43,878 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 89
+2026-10-26 01:55:43,878 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:55:43,878 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 68842.0 , 24781.0
+2026-10-26 01:55:43,878 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (896)
+2026-10-26 01:55:43,878 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=true, posX=57139, posY=47765, path=[971]]
+2026-10-26 01:55:45,027 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 90
+2026-10-26 01:55:45,027 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:55:45,027 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 69455.0 , 22408.0
+2026-10-26 01:55:45,027 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (970)
+2026-10-26 01:55:45,027 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[896, 970, 968]]
+2026-10-26 01:55:46,197 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 91
+2026-10-26 01:55:46,197 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:55:46,197 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 69450.0 , 22408.0
+2026-10-26 01:55:46,197 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (970)
+2026-10-26 01:55:46,197 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[970, 968]]
+2026-10-26 01:55:47,415 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 92
+2026-10-26 01:55:47,415 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:55:47,415 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 71534.0 , 24585.0
+2026-10-26 01:55:47,415 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (896)
+2026-10-26 01:55:47,415 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=true, posX=87160, posY=46622, path=[970]]
+2026-10-26 01:55:48,551 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 93
+2026-10-26 01:55:48,551 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:55:48,551 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 70639.0 , 22338.0
+2026-10-26 01:55:48,551 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (970)
+2026-10-26 01:55:48,551 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[896, 970, 971, 899]]
+2026-10-26 01:55:49,685 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 94
+2026-10-26 01:55:49,685 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:55:49,685 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 71063.0 , 22221.0
+2026-10-26 01:55:49,685 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (970)
+2026-10-26 01:55:49,685 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[970, 971, 899]]
+2026-10-26 01:55:50,908 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 95
+2026-10-26 01:55:50,908 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:55:50,908 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 100503.0 , 31469.0
+2026-10-26 01:55:50,908 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Building (959)
+2026-10-26 01:55:50,908 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=true, posX=99753, posY=30987, path=[970]]
+2026-10-26 01:55:52,129 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 96
+2026-10-26 01:55:52,129 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:55:52,129 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 95491.0 , 25070.0
+2026-10-26 01:55:52,129 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (899)
+2026-10-26 01:55:52,129 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[959, 899]]
+2026-10-26 01:55:53,268 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 97
+2026-10-26 01:55:53,268 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:55:53,268 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 71713.0 , 22136.0
+2026-10-26 01:55:53,268 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (971)
+2026-10-26 01:55:53,268 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[899, 971, 970, 968]]
+2026-10-26 01:55:54,495 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 98
+2026-10-26 01:55:54,495 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:55:54,495 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 72019.0 , 21716.0
+2026-10-26 01:55:54,495 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (971)
+2026-10-26 01:55:54,495 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[971, 970, 968]]
+2026-10-26 01:55:55,620 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 99
+2026-10-26 01:55:55,620 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:55:55,620 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 69186.0 , 24953.0
+2026-10-26 01:55:55,620 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (896)
+2026-10-26 01:55:55,620 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=true, posX=57167, posY=47781, path=[971]]
+2026-10-26 01:55:56,755 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 100
+2026-10-26 01:55:56,755 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:55:56,755 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 71604.0 , 21990.0
+2026-10-26 01:55:56,755 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (971)
+2026-10-26 01:55:56,755 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[896, 970, 971, 899]]
+2026-10-26 01:55:57,902 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 101
+2026-10-26 01:55:57,902 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:55:57,903 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 95381.0 , 25161.0
+2026-10-26 01:55:57,903 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (899)
+2026-10-26 01:55:57,903 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[971, 899]]
+2026-10-26 01:55:59,039 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 102
+2026-10-26 01:55:59,039 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:55:59,039 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 71460.0 , 22098.0
+2026-10-26 01:55:59,039 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (970)
+2026-10-26 01:55:59,039 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[899, 971, 970, 968]]
+2026-10-26 01:56:00,182 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 103
+2026-10-26 01:56:00,182 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:00,182 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 69210.0 , 22408.0
+2026-10-26 01:56:00,182 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (970)
+2026-10-26 01:56:00,182 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[970, 968]]
+2026-10-26 01:56:01,317 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 104
+2026-10-26 01:56:01,317 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:01,318 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 69350.0 , 22408.0
+2026-10-26 01:56:01,318 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (970)
+2026-10-26 01:56:01,318 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[970, 968]]
+2026-10-26 01:56:02,541 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 105
+2026-10-26 01:56:02,541 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:02,541 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 61435.0 , 21910.0
+2026-10-26 01:56:02,541 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (968)
+2026-10-26 01:56:02,541 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=true, posX=39581, posY=26130, path=[970]]
+2026-10-26 01:56:03,670 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 106
+2026-10-26 01:56:03,670 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:03,670 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 68975.0 , 22406.0
+2026-10-26 01:56:03,670 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (970)
+2026-10-26 01:56:03,670 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[968, 970, 896]]
+2026-10-26 01:56:04,806 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 107
+2026-10-26 01:56:04,807 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:04,807 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 71719.0 , 21916.0
+2026-10-26 01:56:04,807 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (971)
+2026-10-26 01:56:04,807 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[970, 971, 279, 274, 976, 975, 974, 262, 280, 259, 297, 915, 943]]
+2026-10-26 01:56:05,937 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 108
+2026-10-26 01:56:05,937 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:05,937 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 118135.0 , 20361.0
+2026-10-26 01:56:05,937 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (274)
+2026-10-26 01:56:05,937 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[971, 279, 274, 976, 975, 974, 262, 280, 259, 297, 915, 943]]
+2026-10-26 01:56:07,243 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 109
+2026-10-26 01:56:07,243 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:07,243 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 95409.0 , 25254.0
+2026-10-26 01:56:07,243 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (899)
+2026-10-26 01:56:07,243 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[274, 279, 971, 899]]
+2026-10-26 01:56:08,376 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 110
+2026-10-26 01:56:08,376 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:08,376 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 71593.0 , 21995.0
+2026-10-26 01:56:08,376 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (971)
+2026-10-26 01:56:08,376 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[899, 971, 970, 896]]
+2026-10-26 01:56:09,512 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 111
+2026-10-26 01:56:09,512 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:09,512 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 72019.0 , 21716.0
+2026-10-26 01:56:09,512 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (971)
+2026-10-26 01:56:09,512 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[971, 970, 896]]
+2026-10-26 01:56:10,656 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 112
+2026-10-26 01:56:10,656 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:10,656 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 68867.0 , 24794.0
+2026-10-26 01:56:10,656 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (896)
+2026-10-26 01:56:10,656 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=true, posX=57167, posY=47781, path=[971]]
+2026-10-26 01:56:11,884 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 113
+2026-10-26 01:56:11,884 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:11,884 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 69455.0 , 22406.0
+2026-10-26 01:56:11,885 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (970)
+2026-10-26 01:56:11,885 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[896, 970, 968]]
+2026-10-26 01:56:13,018 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 114
+2026-10-26 01:56:13,018 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:13,018 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 69450.0 , 22408.0
+2026-10-26 01:56:13,018 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (970)
+2026-10-26 01:56:13,018 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[970, 968]]
+2026-10-26 01:56:14,240 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 115
+2026-10-26 01:56:14,240 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:14,240 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 71533.0 , 24585.0
+2026-10-26 01:56:14,240 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (896)
+2026-10-26 01:56:14,240 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=true, posX=87160, posY=46622, path=[970]]
+2026-10-26 01:56:15,457 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 116
+2026-10-26 01:56:15,457 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:15,457 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 71370.0 , 22112.0
+2026-10-26 01:56:15,457 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (970)
+2026-10-26 01:56:15,457 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[896, 970, 971, 899]]
+2026-10-26 01:56:16,596 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 117
+2026-10-26 01:56:16,596 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:16,596 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 70893.0 , 22280.0
+2026-10-26 01:56:16,596 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (970)
+2026-10-26 01:56:16,596 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[970, 971, 899]]
+2026-10-26 01:56:17,726 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 118
+2026-10-26 01:56:17,726 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:17,727 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 101378.0 , 27495.0
+2026-10-26 01:56:17,727 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Building (959)
+2026-10-26 01:56:17,727 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=true, posX=100536, posY=26888, path=[970]]
+2026-10-26 01:56:18,951 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 119
+2026-10-26 01:56:18,951 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:18,951 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 95485.0 , 25081.0
+2026-10-26 01:56:18,951 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (899)
+2026-10-26 01:56:18,951 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[959, 899]]
+2026-10-26 01:56:20,081 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 120
+2026-10-26 01:56:20,081 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:20,081 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 71452.0 , 22089.0
+2026-10-26 01:56:20,081 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (970)
+2026-10-26 01:56:20,081 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[899, 971, 970, 968]]
+2026-10-26 01:56:21,230 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 121
+2026-10-26 01:56:21,230 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:21,230 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 69448.0 , 22408.0
+2026-10-26 01:56:21,230 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (970)
+2026-10-26 01:56:21,230 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[970, 968]]
+2026-10-26 01:56:22,371 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 122
+2026-10-26 01:56:22,371 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:22,371 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 70000.0 , 25351.0
+2026-10-26 01:56:22,371 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (896)
+2026-10-26 01:56:22,371 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[970, 896]]
+2026-10-26 01:56:23,518 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 123
+2026-10-26 01:56:23,518 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:23,518 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 71361.0 , 22116.0
+2026-10-26 01:56:23,518 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (970)
+2026-10-26 01:56:23,518 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[896, 970, 971, 899]]
+2026-10-26 01:56:24,671 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 124
+2026-10-26 01:56:24,671 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:24,671 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 70893.0 , 22280.0
+2026-10-26 01:56:24,671 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (970)
+2026-10-26 01:56:24,671 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[970, 971, 899]]
+2026-10-26 01:56:25,976 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 125
+2026-10-26 01:56:25,976 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:25,976 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 101378.0 , 27492.0
+2026-10-26 01:56:25,976 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Building (959)
+2026-10-26 01:56:25,976 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=true, posX=100536, posY=26888, path=[970]]
+2026-10-26 01:56:27,108 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 126
+2026-10-26 01:56:27,109 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:27,109 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 95485.0 , 25081.0
+2026-10-26 01:56:27,109 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (899)
+2026-10-26 01:56:27,109 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[959, 899]]
+2026-10-26 01:56:28,263 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 127
+2026-10-26 01:56:28,263 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:28,263 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 71452.0 , 22089.0
+2026-10-26 01:56:28,263 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (970)
+2026-10-26 01:56:28,263 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[899, 971, 970, 968]]
+2026-10-26 01:56:29,415 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 128
+2026-10-26 01:56:29,415 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:29,415 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 69448.0 , 22408.0
+2026-10-26 01:56:29,415 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (970)
+2026-10-26 01:56:29,415 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[970, 968]]
+2026-10-26 01:56:30,564 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 129
+2026-10-26 01:56:30,564 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:30,564 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 70000.0 , 25351.0
+2026-10-26 01:56:30,564 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (896)
+2026-10-26 01:56:30,564 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[970, 896]]
+2026-10-26 01:56:31,719 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 130
+2026-10-26 01:56:31,719 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:31,719 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 71361.0 , 22116.0
+2026-10-26 01:56:31,719 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (970)
+2026-10-26 01:56:31,719 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[896, 970, 971, 279, 274, 976, 975, 974, 262, 280, 259, 297, 915, 943]]
+2026-10-26 01:56:32,866 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 131
+2026-10-26 01:56:32,866 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:32,866 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 70893.0 , 22280.0
+2026-10-26 01:56:32,866 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (970)
+2026-10-26 01:56:32,866 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[970, 971, 279, 274, 976, 975, 974, 262, 280, 259, 297, 915, 943]]
+2026-10-26 01:56:34,015 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 132
+2026-10-26 01:56:34,015 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:34,015 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 101378.0 , 27492.0
+2026-10-26 01:56:34,015 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Building (959)
+2026-10-26 01:56:34,015 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=true, posX=100536, posY=26888, path=[970]]
+2026-10-26 01:56:35,168 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 133
+2026-10-26 01:56:35,168 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:35,168 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 125642.0 , 20803.0
+2026-10-26 01:56:35,168 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (274)
+2026-10-26 01:56:35,168 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[959, 899, 971, 279, 274, 976, 975, 974, 262, 280, 259, 297, 915, 943]]
+2026-10-26 01:56:36,326 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 134
+2026-10-26 01:56:36,326 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:36,326 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 95991.0 , 24855.0
+2026-10-26 01:56:36,326 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (899)
+2026-10-26 01:56:36,326 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[274, 279, 971, 899]]
+2026-10-26 01:56:37,471 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 135
+2026-10-26 01:56:37,471 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:37,471 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 71537.0 , 22067.0
+2026-10-26 01:56:37,471 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (971)
+2026-10-26 01:56:37,471 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[899, 971, 970, 896]]
+2026-10-26 01:56:38,613 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 136
+2026-10-26 01:56:38,613 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:38,613 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 72020.0 , 21715.0
+2026-10-26 01:56:38,613 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (971)
+2026-10-26 01:56:38,613 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[971, 970, 896]]
+2026-10-26 01:56:39,774 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 137
+2026-10-26 01:56:39,774 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:39,774 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 68856.0 , 24788.0
+2026-10-26 01:56:39,774 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (896)
+2026-10-26 01:56:39,774 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=true, posX=57155, posY=47773, path=[971]]
+2026-10-26 01:56:40,916 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 138
+2026-10-26 01:56:40,916 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:40,916 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 69455.0 , 22408.0
+2026-10-26 01:56:40,916 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (970)
+2026-10-26 01:56:40,916 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[896, 970, 968]]
+2026-10-26 01:56:42,058 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 139
+2026-10-26 01:56:42,058 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:42,058 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 69450.0 , 22408.0
+2026-10-26 01:56:42,058 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (970)
+2026-10-26 01:56:42,058 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[970, 968]]
+2026-10-26 01:56:43,202 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 140
+2026-10-26 01:56:43,202 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:43,202 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 71536.0 , 24584.0
+2026-10-26 01:56:43,202 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (896)
+2026-10-26 01:56:43,202 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=true, posX=87160, posY=46622, path=[970]]
+2026-10-26 01:56:44,502 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 141
+2026-10-26 01:56:44,502 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:44,502 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 71361.0 , 22115.0
+2026-10-26 01:56:44,503 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (970)
+2026-10-26 01:56:44,503 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[896, 970, 971, 899]]
+2026-10-26 01:56:45,637 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 142
+2026-10-26 01:56:45,637 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:45,637 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 70893.0 , 22280.0
+2026-10-26 01:56:45,637 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (970)
+2026-10-26 01:56:45,637 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[970, 971, 899]]
+2026-10-26 01:56:46,772 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 143
+2026-10-26 01:56:46,772 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:46,772 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 101376.0 , 27499.0
+2026-10-26 01:56:46,772 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Building (959)
+2026-10-26 01:56:46,772 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=true, posX=100536, posY=26888, path=[970]]
+2026-10-26 01:56:48,072 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 144
+2026-10-26 01:56:48,072 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:48,072 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 95486.0 , 25080.0
+2026-10-26 01:56:48,072 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (899)
+2026-10-26 01:56:48,072 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[959, 899]]
+2026-10-26 01:56:49,211 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 145
+2026-10-26 01:56:49,211 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:49,211 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 67563.0 , 19342.0
+2026-10-26 01:56:49,211 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (968)
+2026-10-26 01:56:49,211 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[899, 971, 970, 968, 251]]
+2026-10-26 01:56:50,344 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 146
+2026-10-26 01:56:50,344 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:50,344 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 65693.0 , 19377.0
+2026-10-26 01:56:50,344 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (968)
+2026-10-26 01:56:50,344 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[968, 251]]
+2026-10-26 01:56:51,659 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 147
+2026-10-26 01:56:51,659 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:51,659 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 66801.0 , 19893.0
+2026-10-26 01:56:51,659 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (968)
+2026-10-26 01:56:51,659 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=true, posX=66803, posY=19894, path=[968]]
+2026-10-26 01:56:52,785 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 148
+2026-10-26 01:56:52,785 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:52,785 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 64992.0 , 9529.0
+2026-10-26 01:56:52,785 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Building (251)
+2026-10-26 01:56:52,785 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[968, 251]]
+2026-10-26 01:56:53,917 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 149
+2026-10-26 01:56:53,917 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:53,917 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 34540.0 , 22678.0
+2026-10-26 01:56:53,917 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (969)
+2026-10-26 01:56:53,917 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[251, 968, 969, 902, 273, 903, 935]]
+2026-10-26 01:56:55,060 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 150
+2026-10-26 01:56:55,060 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:55,060 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 39286.0 , 52047.0
+2026-10-26 01:56:55,060 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Building (935)
+2026-10-26 01:56:55,060 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[969, 902, 273, 903, 935]]
+2026-10-26 01:56:56,209 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 151
+2026-10-26 01:56:56,209 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:56,209 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 39030.0 , 21781.0
+2026-10-26 01:56:56,209 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (969)
+2026-10-26 01:56:56,209 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[935, 903, 273, 902, 969, 968, 970, 971, 279, 266, 269, 932, 953]]
+2026-10-26 01:56:57,351 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 152
+2026-10-26 01:56:57,351 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:57,351 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 88165.0 , 20946.0
+2026-10-26 01:56:57,351 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (971)
+2026-10-26 01:56:57,351 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[969, 968, 970, 971, 279, 266, 269, 932, 953]]
+2026-10-26 01:56:58,493 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 153
+2026-10-26 01:56:58,493 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:58,493 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 109829.0 , 43812.0
+2026-10-26 01:56:58,493 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (266)
+2026-10-26 01:56:58,493 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[971, 279, 266, 269, 932, 953]]
+2026-10-26 01:56:59,636 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 154
+2026-10-26 01:56:59,636 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:56:59,636 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 96349.0 , 48008.0
+2026-10-26 01:56:59,636 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (275)
+2026-10-26 01:56:59,636 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[266, 269, 258, 275, 268, 278, 263, 913, 941]]
+2026-10-26 01:57:00,796 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 155
+2026-10-26 01:57:00,796 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:57:00,796 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 77268.0 , 57053.0
+2026-10-26 01:57:00,796 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (268)
+2026-10-26 01:57:00,796 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[275, 268, 278, 263, 913, 941]]
+2026-10-26 01:57:01,949 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 156
+2026-10-26 01:57:01,949 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:57:01,949 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 77268.0 , 57053.0
+2026-10-26 01:57:01,949 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (268)
+2026-10-26 01:57:01,949 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[268, 278, 263, 270, 257, 280, 259, 297, 915, 943]]
+2026-10-26 01:57:03,096 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 157
+2026-10-26 01:57:03,096 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:57:03,096 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 77268.0 , 57053.0
+2026-10-26 01:57:03,096 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (268)
+2026-10-26 01:57:03,096 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=true, posX=80473, posY=86881, path=[268]]
+2026-10-26 01:57:03,096 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] cannot reach : null
+2026-10-26 01:57:04,255 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 158
+2026-10-26 01:57:04,255 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:57:04,255 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 77268.0 , 57053.0
+2026-10-26 01:57:04,255 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (268)
+2026-10-26 01:57:04,255 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=true, posX=80473, posY=86881, path=[268]]
+2026-10-26 01:57:04,255 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] cannot reach : null
+2026-10-26 01:57:04,255 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] cannot reach : null for 1 times, start random move
+2026-10-26 01:57:04,255 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] move to middle ActionMove [usePosition=true, posX=80000, posY=50500, path=[268]]
+2026-10-26 01:57:05,403 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 159
+2026-10-26 01:57:05,403 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:57:05,403 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 80005.0 , 50486.0
+2026-10-26 01:57:05,403 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (275)
+2026-10-26 01:57:05,403 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=true, posX=80000, posY=50500, path=[268]]
+2026-10-26 01:57:05,403 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] randomArea: 268
+2026-10-26 01:57:05,403 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] then, try to random walk
+2026-10-26 01:57:06,546 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 160
+2026-10-26 01:57:06,546 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:57:06,546 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 79949.0 , 65193.0
+2026-10-26 01:57:06,546 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (268)
+2026-10-26 01:57:06,546 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[275, 268]]
+2026-10-26 01:57:07,699 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 161
+2026-10-26 01:57:07,699 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:57:07,699 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 80686.0 , 102395.0
+2026-10-26 01:57:07,699 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (270)
+2026-10-26 01:57:07,699 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[268, 278, 263, 270, 257, 280, 259, 297, 915, 943]]
+2026-10-26 01:57:08,851 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 162
+2026-10-26 01:57:08,851 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:57:08,851 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 80686.0 , 102395.0
+2026-10-26 01:57:08,852 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (270)
+2026-10-26 01:57:08,852 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[270, 257, 280, 259, 297, 915, 943]]
+2026-10-26 01:57:09,997 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 163
+2026-10-26 01:57:09,997 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:57:09,997 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 80548.0 , 100830.0
+2026-10-26 01:57:09,997 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (270)
+2026-10-26 01:57:09,997 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=true, posX=80548, posY=100827, path=[270]]
+2026-10-26 01:57:11,137 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 164
+2026-10-26 01:57:11,137 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:57:11,137 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 98372.0 , 99457.0
+2026-10-26 01:57:11,137 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (257)
+2026-10-26 01:57:11,137 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=true, posX=110459, posY=98530, path=[270]]
+2026-10-26 01:57:12,283 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 165
+2026-10-26 01:57:12,283 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:57:12,283 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 114940.0 , 115797.0
+2026-10-26 01:57:12,283 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (259)
+2026-10-26 01:57:12,283 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[257, 280, 259]]
+2026-10-26 01:57:13,418 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 166
+2026-10-26 01:57:13,418 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:57:13,418 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 125529.0 , 104882.0
+2026-10-26 01:57:13,418 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (262)
+2026-10-26 01:57:13,418 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[259, 280, 262]]
+2026-10-26 01:57:14,561 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 167
+2026-10-26 01:57:14,561 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:57:14,561 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 118507.0 , 110006.0
+2026-10-26 01:57:14,561 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (280)
+2026-10-26 01:57:14,561 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[262, 280]]
+2026-10-26 01:57:15,704 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 168
+2026-10-26 01:57:15,704 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:57:15,704 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 130174.0 , 95026.0
+2026-10-26 01:57:15,704 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (974)
+2026-10-26 01:57:15,704 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[280, 262, 974]]
+2026-10-26 01:57:16,852 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 169
+2026-10-26 01:57:16,852 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:57:16,852 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 128881.0 , 84756.0
+2026-10-26 01:57:16,852 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (975)
+2026-10-26 01:57:16,852 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[974, 975]]
+2026-10-26 01:57:18,065 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 170
+2026-10-26 01:57:18,065 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:57:18,066 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 114520.0 , 116620.0
+2026-10-26 01:57:18,066 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (259)
+2026-10-26 01:57:18,066 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[975, 974, 262, 280, 259]]
+2026-10-26 01:57:19,283 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 171
+2026-10-26 01:57:19,283 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:57:19,283 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 103429.0 , 104408.0
+2026-10-26 01:57:19,283 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (257)
+2026-10-26 01:57:19,283 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[259, 280, 257]]
+2026-10-26 01:57:20,420 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 172
+2026-10-26 01:57:20,420 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:57:20,420 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 125463.0 , 104928.0
+2026-10-26 01:57:20,420 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (262)
+2026-10-26 01:57:20,420 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[257, 280, 262]]
+2026-10-26 01:57:21,731 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 173
+2026-10-26 01:57:21,731 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:57:21,731 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 118506.0 , 110006.0
+2026-10-26 01:57:21,731 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (280)
+2026-10-26 01:57:21,731 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[262, 280]]
+2026-10-26 01:57:22,861 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 174
+2026-10-26 01:57:22,861 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:57:22,861 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 130174.0 , 95026.0
+2026-10-26 01:57:22,861 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (974)
+2026-10-26 01:57:22,861 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[280, 262, 974]]
+2026-10-26 01:57:24,080 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 175
+2026-10-26 01:57:24,080 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:57:24,080 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 130062.0 , 49376.0
+2026-10-26 01:57:24,080 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (976)
+2026-10-26 01:57:24,080 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[974, 975, 976]]
+2026-10-26 01:57:25,295 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 176
+2026-10-26 01:57:25,295 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:57:25,295 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 112755.0 , 19466.0
+2026-10-26 01:57:25,295 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (274)
+2026-10-26 01:57:25,295 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[976, 274, 279, 971, 970, 968, 969, 902, 273, 904, 936]]
+2026-10-26 01:57:26,429 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 177
+2026-10-26 01:57:26,429 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:57:26,429 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 62767.0 , 21237.0
+2026-10-26 01:57:26,429 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (968)
+2026-10-26 01:57:26,429 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[274, 279, 971, 970, 968, 969, 902, 273, 904, 936]]
+2026-10-26 01:57:27,645 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 178
+2026-10-26 01:57:27,645 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:57:27,645 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 30013.0 , 41212.0
+2026-10-26 01:57:27,645 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (273)
+2026-10-26 01:57:27,645 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[968, 969, 902, 273, 904, 936]]
+2026-10-26 01:57:28,774 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 179
+2026-10-26 01:57:28,774 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:57:28,774 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 12664.0 , 69500.0
+2026-10-26 01:57:28,774 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Building (249)
+2026-10-26 01:57:28,774 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[273, 314, 249]]
+2026-10-26 01:57:29,989 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 180
+2026-10-26 01:57:29,989 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:57:29,989 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 39855.0 , 76365.0
+2026-10-26 01:57:29,989 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Building (936)
+2026-10-26 01:57:29,989 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[249, 314, 273, 904, 936]]
+2026-10-26 01:57:31,122 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 181
+2026-10-26 01:57:31,122 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:57:31,122 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 34915.0 , 100344.0
+2026-10-26 01:57:31,122 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (256)
+2026-10-26 01:57:31,122 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[936, 904, 273, 281, 256, 912, 940]]
+2026-10-26 01:57:32,344 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 182
+2026-10-26 01:57:32,344 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:57:32,344 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 63186.0 , 91390.0
+2026-10-26 01:57:32,344 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (271)
+2026-10-26 01:57:32,344 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[256, 271]]
+2026-10-26 01:57:33,477 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 183
+2026-10-26 01:57:33,477 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:57:33,477 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 77534.0 , 102290.0
+2026-10-26 01:57:33,477 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (270)
+2026-10-26 01:57:33,477 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[271, 278, 263, 270, 257]]
+2026-10-26 01:57:34,622 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 184
+2026-10-26 01:57:34,622 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:57:34,622 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 103378.0 , 104407.0
+2026-10-26 01:57:34,622 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (257)
+2026-10-26 01:57:34,622 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[270, 257]]
+2026-10-26 01:57:35,775 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 185
+2026-10-26 01:57:35,775 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:57:35,775 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 114524.0 , 116078.0
+2026-10-26 01:57:35,775 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (259)
+2026-10-26 01:57:35,775 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[257, 280, 259]]
+2026-10-26 01:57:36,928 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 186
+2026-10-26 01:57:36,928 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:57:36,928 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 125528.0 , 104899.0
+2026-10-26 01:57:36,928 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (262)
+2026-10-26 01:57:36,928 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[259, 280, 262]]
+2026-10-26 01:57:38,317 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 187
+2026-10-26 01:57:38,317 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:57:38,317 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 118507.0 , 110006.0
+2026-10-26 01:57:38,317 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (280)
+2026-10-26 01:57:38,317 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[262, 280]]
+2026-10-26 01:57:39,452 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 188
+2026-10-26 01:57:39,452 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:57:39,452 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 103334.0 , 104382.0
+2026-10-26 01:57:39,452 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (257)
+2026-10-26 01:57:39,452 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[280, 257]]
+2026-10-26 01:57:40,836 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 189
+2026-10-26 01:57:40,836 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:57:40,836 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 114504.0 , 116095.0
+2026-10-26 01:57:40,836 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (259)
+2026-10-26 01:57:40,836 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[257, 280, 259]]
+2026-10-26 01:57:41,966 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 190
+2026-10-26 01:57:41,966 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:57:41,966 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 125534.0 , 104879.0
+2026-10-26 01:57:41,966 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (262)
+2026-10-26 01:57:41,967 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[259, 280, 262]]
+2026-10-26 01:57:43,275 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 191
+2026-10-26 01:57:43,275 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:57:43,275 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 86571.0 , 121315.0
+2026-10-26 01:57:43,275 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (297)
+2026-10-26 01:57:43,275 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[262, 280, 259, 297]]
+2026-10-26 01:57:44,402 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 192
+2026-10-26 01:57:44,402 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:57:44,402 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 98652.0 , 111840.0
+2026-10-26 01:57:44,402 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Building (943)
+2026-10-26 01:57:44,402 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[297, 915, 943]]
+2026-10-26 01:57:45,618 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 193
+2026-10-26 01:57:45,618 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:57:45,618 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 91489.0 , 116438.0
+2026-10-26 01:57:45,618 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (915)
+2026-10-26 01:57:45,618 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[943, 915]]
+2026-10-26 01:57:46,754 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 194
+2026-10-26 01:57:46,754 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:57:46,754 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 69756.0 , 130512.0
+2026-10-26 01:57:46,754 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Building (253)
+2026-10-26 01:57:46,754 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[915, 297, 253]]
+2026-10-26 01:57:47,905 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 195
+2026-10-26 01:57:47,905 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:57:47,905 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 38652.0 , 118264.0
+2026-10-26 01:57:47,905 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (297)
+2026-10-26 01:57:47,905 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[253, 297, 296, 281, 256, 271, 278, 263]]
+2026-10-26 01:57:49,291 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 196
+2026-10-26 01:57:49,291 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:57:49,291 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 29646.0 , 110768.0
+2026-10-26 01:57:49,291 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (296)
+2026-10-26 01:57:49,291 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[297, 296]]
+2026-10-26 01:57:50,429 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 197
+2026-10-26 01:57:50,429 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:57:50,429 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 60159.0 , 95209.0
+2026-10-26 01:57:50,429 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (271)
+2026-10-26 01:57:50,429 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[296, 281, 256, 271, 278, 268, 275, 258, 269, 932, 953]]
+2026-10-26 01:57:51,730 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 198
+2026-10-26 01:57:51,730 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:57:51,730 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 53549.0 , 112753.0
+2026-10-26 01:57:51,730 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Building (939)
+2026-10-26 01:57:51,730 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[271, 256, 912, 940, 939]]
+2026-10-26 01:57:52,869 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 199
+2026-10-26 01:57:52,869 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:57:52,869 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 72631.0 , 84408.0
+2026-10-26 01:57:52,869 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (271)
+2026-10-26 01:57:52,869 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[939, 940, 912, 256, 271, 278, 263, 913, 941]]
+2026-10-26 01:57:54,013 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 200
+2026-10-26 01:57:54,013 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:57:54,013 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 64104.0 , 78462.0
+2026-10-26 01:57:54,013 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Building (937)
+2026-10-26 01:57:54,013 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[271, 278, 268, 933, 937]]
+2026-10-26 01:57:55,318 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 201
+2026-10-26 01:57:55,318 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:57:55,318 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 73223.0 , 100353.0
+2026-10-26 01:57:55,318 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (263)
+2026-10-26 01:57:55,318 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[937, 933, 268, 278, 263, 913, 941]]
+2026-10-26 01:57:56,534 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 202
+2026-10-26 01:57:56,534 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:57:56,534 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 67004.0 , 107472.0
+2026-10-26 01:57:56,534 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Building (941)
+2026-10-26 01:57:56,534 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[263, 913, 941]]
+2026-10-26 01:57:57,670 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 203
+2026-10-26 01:57:57,670 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:57:57,670 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 86786.0 , 89784.0
+2026-10-26 01:57:57,670 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Building (944)
+2026-10-26 01:57:57,670 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[941, 913, 263, 270, 916, 944]]
+2026-10-26 01:57:58,804 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 204
+2026-10-26 01:57:58,804 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:57:58,804 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 82493.0 , 96510.0
+2026-10-26 01:57:58,804 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (916)
+2026-10-26 01:57:58,804 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[944, 916]]
+2026-10-26 01:57:59,939 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 205
+2026-10-26 01:57:59,939 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:57:59,939 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 103385.0 , 104399.0
+2026-10-26 01:57:59,939 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (257)
+2026-10-26 01:57:59,939 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[916, 270, 257]]
+2026-10-26 01:58:01,072 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 206
+2026-10-26 01:58:01,072 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:58:01,072 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 114460.0 , 116111.0
+2026-10-26 01:58:01,072 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (259)
+2026-10-26 01:58:01,072 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[257, 280, 259]]
+2026-10-26 01:58:02,217 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 207
+2026-10-26 01:58:02,217 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:58:02,217 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 125534.0 , 104879.0
+2026-10-26 01:58:02,217 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (262)
+2026-10-26 01:58:02,217 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[259, 280, 262]]
+2026-10-26 01:58:03,521 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 208
+2026-10-26 01:58:03,522 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:58:03,522 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 126843.0 , 64183.0
+2026-10-26 01:58:03,522 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (976)
+2026-10-26 01:58:03,522 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[262, 974, 975, 976, 923, 951]]
+2026-10-26 01:58:04,909 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 209
+2026-10-26 01:58:04,909 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:58:04,909 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 130026.0 , 94884.0
+2026-10-26 01:58:04,909 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (974)
+2026-10-26 01:58:04,909 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[976, 975, 974]]
+2026-10-26 01:58:06,126 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 210
+2026-10-26 01:58:06,126 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:58:06,126 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 103620.0 , 104497.0
+2026-10-26 01:58:06,126 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (257)
+2026-10-26 01:58:06,126 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[974, 262, 280, 257]]
+2026-10-26 01:58:07,261 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 211
+2026-10-26 01:58:07,261 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:58:07,261 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 114607.0 , 116073.0
+2026-10-26 01:58:07,261 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (259)
+2026-10-26 01:58:07,261 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[257, 280, 259]]
+2026-10-26 01:58:08,479 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 212
+2026-10-26 01:58:08,479 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:58:08,479 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 125536.0 , 104878.0
+2026-10-26 01:58:08,479 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (262)
+2026-10-26 01:58:08,479 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[259, 280, 262]]
+2026-10-26 01:58:09,617 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 213
+2026-10-26 01:58:09,617 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:58:09,617 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 128853.0 , 84857.0
+2026-10-26 01:58:09,617 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (975)
+2026-10-26 01:58:09,617 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[262, 974, 975]]
+2026-10-26 01:58:10,754 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 214
+2026-10-26 01:58:10,754 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:58:10,754 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 118437.0 , 110055.0
+2026-10-26 01:58:10,754 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (280)
+2026-10-26 01:58:10,754 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[975, 974, 262, 280]]
+2026-10-26 01:58:12,046 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 215
+2026-10-26 01:58:12,046 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:58:12,046 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 103348.0 , 104386.0
+2026-10-26 01:58:12,046 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (257)
+2026-10-26 01:58:12,046 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[280, 257]]
+2026-10-26 01:58:13,176 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 216
+2026-10-26 01:58:13,176 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:58:13,177 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 114504.0 , 116095.0
+2026-10-26 01:58:13,177 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (259)
+2026-10-26 01:58:13,177 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[257, 280, 259]]
+2026-10-26 01:58:14,562 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 217
+2026-10-26 01:58:14,562 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:58:14,562 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 125534.0 , 104879.0
+2026-10-26 01:58:14,562 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (262)
+2026-10-26 01:58:14,562 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[259, 280, 262]]
+2026-10-26 01:58:15,693 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 218
+2026-10-26 01:58:15,693 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:58:15,693 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 130147.0 , 95053.0
+2026-10-26 01:58:15,693 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (974)
+2026-10-26 01:58:15,693 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[262, 974]]
+2026-10-26 01:58:16,991 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 219
+2026-10-26 01:58:16,991 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:58:16,991 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 119578.0 , 63009.0
+2026-10-26 01:58:16,991 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Building (951)
+2026-10-26 01:58:16,991 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[974, 975, 976, 923, 951]]
+2026-10-26 01:58:18,204 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 220
+2026-10-26 01:58:18,204 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:58:18,204 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 130045.0 , 50513.0
+2026-10-26 01:58:18,204 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (976)
+2026-10-26 01:58:18,204 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[951, 923, 976]]
+2026-10-26 01:58:19,339 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 221
+2026-10-26 01:58:19,339 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:58:19,339 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 128993.0 , 84507.0
+2026-10-26 01:58:19,339 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (975)
+2026-10-26 01:58:19,339 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[976, 975]]
+2026-10-26 01:58:20,636 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 222
+2026-10-26 01:58:20,636 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:58:20,636 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 114631.0 , 116337.0
+2026-10-26 01:58:20,636 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (259)
+2026-10-26 01:58:20,636 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[975, 974, 262, 280, 259]]
+2026-10-26 01:58:21,779 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 223
+2026-10-26 01:58:21,779 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:58:21,779 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 103442.0 , 104411.0
+2026-10-26 01:58:21,779 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (257)
+2026-10-26 01:58:21,779 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[259, 280, 257]]
+2026-10-26 01:58:23,075 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 224
+2026-10-26 01:58:23,075 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:58:23,075 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 77547.0 , 88189.0
+2026-10-26 01:58:23,075 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (263)
+2026-10-26 01:58:23,075 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[257, 270, 263, 278, 268, 275, 258, 269, 932, 953]]
+2026-10-26 01:58:24,541 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 225
+2026-10-26 01:58:24,542 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:58:24,542 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 87982.0 , 47788.0
+2026-10-26 01:58:24,542 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (275)
+2026-10-26 01:58:24,542 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[263, 278, 268, 275, 258, 269, 932, 953]]
+2026-10-26 01:58:25,672 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 226
+2026-10-26 01:58:25,672 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:58:25,672 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 110955.0 , 59091.0
+2026-10-26 01:58:25,672 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (266)
+2026-10-26 01:58:25,672 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[275, 258, 269, 266, 279, 971, 970, 896, 960]]
+2026-10-26 01:58:26,814 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 227
+2026-10-26 01:58:26,814 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:58:26,814 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 94849.0 , 66719.0
+2026-10-26 01:58:26,814 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Building (953)
+2026-10-26 01:58:26,814 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[266, 269, 932, 953]]
+2026-10-26 01:58:28,025 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 228
+2026-10-26 01:58:28,025 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:58:28,025 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 112534.0 , 52342.0
+2026-10-26 01:58:28,025 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (266)
+2026-10-26 01:58:28,025 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[953, 932, 269, 266, 279, 971, 970, 896, 960]]
+2026-10-26 01:58:29,169 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 229
+2026-10-26 01:58:29,169 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:58:29,169 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 103798.0 , 20180.0
+2026-10-26 01:58:29,169 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (971)
+2026-10-26 01:58:29,169 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[266, 279, 971, 970, 896, 960]]
+2026-10-26 01:58:30,462 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 230
+2026-10-26 01:58:30,462 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:58:30,462 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 69670.0 , 25204.0
+2026-10-26 01:58:30,462 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (896)
+2026-10-26 01:58:30,462 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[971, 970, 896, 960]]
+2026-10-26 01:58:31,594 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 231
+2026-10-26 01:58:31,594 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:58:31,594 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 95543.0 , 24783.0
+2026-10-26 01:58:31,594 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (899)
+2026-10-26 01:58:31,594 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[896, 970, 971, 899]]
+2026-10-26 01:58:32,811 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 232
+2026-10-26 01:58:32,811 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:58:32,811 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 64900.0 , 21065.0
+2026-10-26 01:58:32,811 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (968)
+2026-10-26 01:58:32,811 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[899, 971, 970, 968]]
+2026-10-26 01:58:33,945 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 233
+2026-10-26 01:58:33,945 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:58:33,945 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 34909.0 , 24762.0
+2026-10-26 01:58:33,945 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (902)
+2026-10-26 01:58:33,945 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[968, 969, 902]]
+2026-10-26 01:58:35,078 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 234
+2026-10-26 01:58:35,078 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:58:35,078 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 43838.0 , 31326.0
+2026-10-26 01:58:35,078 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Building (934)
+2026-10-26 01:58:35,078 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[902, 934]]
+2026-10-26 01:58:36,295 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 235
+2026-10-26 01:58:36,296 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:58:36,296 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 29914.0 , 52287.0
+2026-10-26 01:58:36,296 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (273)
+2026-10-26 01:58:36,296 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[934, 902, 273]]
+2026-10-26 01:58:37,428 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 236
+2026-10-26 01:58:37,428 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:58:37,428 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 38486.0 , 52004.0
+2026-10-26 01:58:37,428 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Building (935)
+2026-10-26 01:58:37,428 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[273, 903, 935]]
+2026-10-26 01:58:38,573 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 237
+2026-10-26 01:58:38,574 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:58:38,574 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 29910.0 , 59107.0
+2026-10-26 01:58:38,574 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (273)
+2026-10-26 01:58:38,574 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[935, 903, 273]]
+2026-10-26 01:58:39,716 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 238
+2026-10-26 01:58:39,716 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:58:39,716 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 33546.0 , 50490.0
+2026-10-26 01:58:39,716 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (903)
+2026-10-26 01:58:39,716 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[273, 903]]
+2026-10-26 01:58:41,021 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 239
+2026-10-26 01:58:41,021 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:58:41,021 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 33479.0 , 49332.0
+2026-10-26 01:58:41,021 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (903)
+2026-10-26 01:58:41,021 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[903, 273, 902]]
+2026-10-26 01:58:42,153 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 240
+2026-10-26 01:58:42,153 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:58:42,154 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 35121.0 , 24524.0
+2026-10-26 01:58:42,154 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (902)
+2026-10-26 01:58:42,154 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[903, 273, 902]]
+2026-10-26 01:58:43,302 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 241
+2026-10-26 01:58:43,302 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:58:43,302 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 43838.0 , 31329.0
+2026-10-26 01:58:43,302 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Building (934)
+2026-10-26 01:58:43,302 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[902, 934]]
+2026-10-26 01:58:44,444 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 242
+2026-10-26 01:58:44,445 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:58:44,445 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 45160.0 , 19910.0
+2026-10-26 01:58:44,445 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (969)
+2026-10-26 01:58:44,445 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[934, 902, 969]]
+2026-10-26 01:58:45,585 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 243
+2026-10-26 01:58:45,585 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:58:45,585 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 69997.0 , 25351.0
+2026-10-26 01:58:45,585 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (896)
+2026-10-26 01:58:45,585 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[969, 968, 970, 896]]
+2026-10-26 01:58:46,794 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 244
+2026-10-26 01:58:46,794 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:58:46,794 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 95563.0 , 24777.0
+2026-10-26 01:58:46,794 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (899)
+2026-10-26 01:58:46,794 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[896, 970, 971, 899]]
+2026-10-26 01:58:48,018 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 245
+2026-10-26 01:58:48,018 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:58:48,018 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 64892.0 , 21065.0
+2026-10-26 01:58:48,018 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (968)
+2026-10-26 01:58:48,018 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[899, 971, 970, 968]]
+2026-10-26 01:58:49,148 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 246
+2026-10-26 01:58:49,148 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:58:49,148 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 110186.0 , 19917.0
+2026-10-26 01:58:49,148 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (279)
+2026-10-26 01:58:49,148 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[968, 970, 971, 279, 274, 976, 975, 920, 948]]
+2026-10-26 01:58:50,359 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 247
+2026-10-26 01:58:50,359 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:58:50,359 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 131008.0 , 49085.0
+2026-10-26 01:58:50,359 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (976)
+2026-10-26 01:58:50,359 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[279, 274, 976, 975, 920, 948]]
+2026-10-26 01:58:51,490 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 248
+2026-10-26 01:58:51,490 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:58:51,490 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 119001.0 , 81933.0
+2026-10-26 01:58:51,490 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Building (948)
+2026-10-26 01:58:51,490 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[976, 975, 920, 948]]
+2026-10-26 01:58:52,620 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 249
+2026-10-26 01:58:52,620 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:58:52,620 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 129998.0 , 49074.0
+2026-10-26 01:58:52,620 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (976)
+2026-10-26 01:58:52,620 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[948, 920, 975, 976]]
+2026-10-26 01:58:53,750 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 250
+2026-10-26 01:58:53,750 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:58:53,750 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 120630.0 , 20011.0
+2026-10-26 01:58:53,750 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (274)
+2026-10-26 01:58:53,750 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[976, 274]]
+2026-10-26 01:58:54,881 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 251
+2026-10-26 01:58:54,881 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:58:54,881 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 95429.0 , 25250.0
+2026-10-26 01:58:54,881 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (899)
+2026-10-26 01:58:54,881 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[274, 279, 971, 899]]
+2026-10-26 01:58:56,009 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 252
+2026-10-26 01:58:56,009 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:58:56,009 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 69894.0 , 27492.0
+2026-10-26 01:58:56,009 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (896)
+2026-10-26 01:58:56,009 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[899, 971, 970, 896]]
+2026-10-26 01:58:57,141 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 253
+2026-10-26 01:58:57,141 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:58:57,141 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 70006.0 , 35367.0
+2026-10-26 01:58:57,141 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Building (960)
+2026-10-26 01:58:57,141 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[896, 960]]
+2026-10-26 01:58:58,351 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 254
+2026-10-26 01:58:58,351 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:58:58,351 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 70002.0 , 27095.0
+2026-10-26 01:58:58,351 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (896)
+2026-10-26 01:58:58,351 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[960, 896]]
+2026-10-26 01:58:59,482 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 255
+2026-10-26 01:58:59,482 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:58:59,482 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 94921.0 , 25279.0
+2026-10-26 01:58:59,482 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (899)
+2026-10-26 01:58:59,482 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[896, 970, 971, 899]]
+2026-10-26 01:59:00,612 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 256
+2026-10-26 01:59:00,612 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:59:00,612 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 64900.0 , 21071.0
+2026-10-26 01:59:00,612 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (968)
+2026-10-26 01:59:00,612 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[899, 971, 970, 968]]
+2026-10-26 01:59:01,825 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 257
+2026-10-26 01:59:01,825 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:59:01,825 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 34909.0 , 24762.0
+2026-10-26 01:59:01,825 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (902)
+2026-10-26 01:59:01,825 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[968, 969, 902]]
+2026-10-26 01:59:02,953 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 258
+2026-10-26 01:59:02,953 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:59:02,953 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 43838.0 , 31326.0
+2026-10-26 01:59:02,953 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Building (934)
+2026-10-26 01:59:02,953 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[902, 934]]
+2026-10-26 01:59:04,086 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 259
+2026-10-26 01:59:04,086 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:59:04,086 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 29914.0 , 52287.0
+2026-10-26 01:59:04,086 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (273)
+2026-10-26 01:59:04,086 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[934, 902, 273]]
+2026-10-26 01:59:05,217 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 260
+2026-10-26 01:59:05,217 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:59:05,217 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 37332.0 , 22889.0
+2026-10-26 01:59:05,218 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (969)
+2026-10-26 01:59:05,218 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[273, 902, 934]]
+2026-10-26 01:59:06,351 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 261
+2026-10-26 01:59:06,352 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:59:06,352 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 35287.0 , 24863.0
+2026-10-26 01:59:06,352 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (902)
+2026-10-26 01:59:06,352 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[969, 902]]
+2026-10-26 01:59:07,478 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 262
+2026-10-26 01:59:07,478 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:59:07,478 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 43841.0 , 31330.0
+2026-10-26 01:59:07,478 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Building (934)
+2026-10-26 01:59:07,478 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[902, 934]]
+2026-10-26 01:59:08,696 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 263
+2026-10-26 01:59:08,696 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:59:08,696 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 43916.0 , 31393.0
+2026-10-26 01:59:08,696 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Building (934)
+2026-10-26 01:59:08,696 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionRest []
+2026-10-26 01:59:09,825 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 264
+2026-10-26 01:59:09,825 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:59:09,825 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 43916.0 , 31393.0
+2026-10-26 01:59:09,825 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Building (934)
+2026-10-26 01:59:09,825 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionRest []
+2026-10-26 01:59:10,960 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 265
+2026-10-26 01:59:10,960 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:59:10,960 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 43916.0 , 31393.0
+2026-10-26 01:59:10,960 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Building (934)
+2026-10-26 01:59:10,960 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionRest []
+2026-10-26 01:59:12,091 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 266
+2026-10-26 01:59:12,091 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:59:12,091 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 43916.0 , 31393.0
+2026-10-26 01:59:12,091 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Building (934)
+2026-10-26 01:59:12,091 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionRest []
+2026-10-26 01:59:13,226 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 267
+2026-10-26 01:59:13,226 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:59:13,226 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 29924.0 , 52288.0
+2026-10-26 01:59:13,226 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (273)
+2026-10-26 01:59:13,226 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[934, 902, 273]]
+2026-10-26 01:59:14,355 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 268
+2026-10-26 01:59:14,356 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:59:14,356 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 35018.0 , 24988.0
+2026-10-26 01:59:14,356 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (902)
+2026-10-26 01:59:14,356 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[273, 902]]
+2026-10-26 01:59:15,484 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 269
+2026-10-26 01:59:15,484 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:59:15,484 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 64236.0 , 21022.0
+2026-10-26 01:59:15,484 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (968)
+2026-10-26 01:59:15,484 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[902, 969, 968]]
+2026-10-26 01:59:16,690 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 270
+2026-10-26 01:59:16,690 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:59:16,690 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 70039.0 , 35295.0
+2026-10-26 01:59:16,690 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Building (960)
+2026-10-26 01:59:16,690 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[968, 970, 896, 960]]
+2026-10-26 01:59:17,822 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 271
+2026-10-26 01:59:17,822 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:59:17,822 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 70002.0 , 27096.0
+2026-10-26 01:59:17,822 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (896)
+2026-10-26 01:59:17,822 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[960, 896]]
+2026-10-26 01:59:19,423 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 272
+2026-10-26 01:59:19,423 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:59:19,423 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 95109.0 , 24779.0
+2026-10-26 01:59:19,423 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (899)
+2026-10-26 01:59:19,423 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[896, 970, 971, 899]]
+2026-10-26 01:59:20,558 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 273
+2026-10-26 01:59:20,558 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:59:20,558 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 110161.0 , 42913.0
+2026-10-26 01:59:20,558 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (266)
+2026-10-26 01:59:20,558 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[899, 971, 279, 266]]
+2026-10-26 01:59:21,852 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 274
+2026-10-26 01:59:21,852 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:59:21,852 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 101190.0 , 60758.0
+2026-10-26 01:59:21,852 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (269)
+2026-10-26 01:59:21,852 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[266, 269, 258]]
+2026-10-26 01:59:22,987 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 275
+2026-10-26 01:59:22,987 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:59:22,987 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 101090.0 , 60801.0
+2026-10-26 01:59:22,987 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (269)
+2026-10-26 01:59:22,987 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[269, 258]]
+2026-10-26 01:59:24,117 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 276
+2026-10-26 01:59:24,117 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:59:24,117 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 102859.0 , 60645.0
+2026-10-26 01:59:24,117 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (269)
+2026-10-26 01:59:24,117 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=true, posX=102863, posY=60645, path=[269]]
+2026-10-26 01:59:25,505 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 277
+2026-10-26 01:59:25,505 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:59:25,505 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 92715.0 , 47234.0
+2026-10-26 01:59:25,505 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (275)
+2026-10-26 01:59:25,505 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=true, posX=92434, posY=32514, path=[269]]
+2026-10-26 01:59:26,716 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 278
+2026-10-26 01:59:26,716 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:59:26,716 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 105425.0 , 60422.0
+2026-10-26 01:59:26,716 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (269)
+2026-10-26 01:59:26,716 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[275, 258, 269, 266, 279, 971, 970, 896, 960]]
+2026-10-26 01:59:27,931 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 279
+2026-10-26 01:59:27,931 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:59:27,931 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 100807.0 , 60417.0
+2026-10-26 01:59:27,931 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (269)
+2026-10-26 01:59:27,931 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[269, 258]]
+2026-10-26 01:59:29,057 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 280
+2026-10-26 01:59:29,057 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:59:29,057 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 100166.0 , 55097.0
+2026-10-26 01:59:29,057 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (258)
+2026-10-26 01:59:29,057 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[269, 258]]
+2026-10-26 01:59:30,195 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 281
+2026-10-26 01:59:30,195 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:59:30,195 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 111299.0 , 37648.0
+2026-10-26 01:59:30,195 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (266)
+2026-10-26 01:59:30,195 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[258, 269, 266, 279, 971, 970, 896, 960]]
+2026-10-26 01:59:31,408 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 282
+2026-10-26 01:59:31,408 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:59:31,408 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 105178.0 , 63315.0
+2026-10-26 01:59:31,408 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (932)
+2026-10-26 01:59:31,408 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[266, 269, 932]]
+2026-10-26 01:59:32,706 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 283
+2026-10-26 01:59:32,706 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:59:32,706 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 105055.0 , 60619.0
+2026-10-26 01:59:32,706 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (269)
+2026-10-26 01:59:32,706 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[932, 269]]
+2026-10-26 01:59:33,839 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 284
+2026-10-26 01:59:33,840 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:59:33,840 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 110025.0 , 21688.0
+2026-10-26 01:59:33,840 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (279)
+2026-10-26 01:59:33,840 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[269, 266, 279, 274, 976]]
+2026-10-26 01:59:34,968 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 285
+2026-10-26 01:59:34,968 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:59:34,968 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 95439.0 , 25047.0
+2026-10-26 01:59:34,968 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (899)
+2026-10-26 01:59:34,968 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[279, 971, 899]]
+2026-10-26 01:59:36,181 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 286
+2026-10-26 01:59:36,181 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:59:36,181 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 69870.0 , 27437.0
+2026-10-26 01:59:36,181 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (896)
+2026-10-26 01:59:36,181 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[899, 971, 970, 896]]
+2026-10-26 01:59:37,313 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 287
+2026-10-26 01:59:37,313 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:59:37,313 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 70006.0 , 35367.0
+2026-10-26 01:59:37,313 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Building (960)
+2026-10-26 01:59:37,313 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[896, 960]]
+2026-10-26 01:59:38,441 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 288
+2026-10-26 01:59:38,441 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:59:38,441 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 70002.0 , 27095.0
+2026-10-26 01:59:38,441 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (896)
+2026-10-26 01:59:38,441 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[960, 896]]
+2026-10-26 01:59:39,574 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 289
+2026-10-26 01:59:39,574 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:59:39,574 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 95109.0 , 24779.0
+2026-10-26 01:59:39,574 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (899)
+2026-10-26 01:59:39,574 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[896, 970, 971, 899]]
+2026-10-26 01:59:40,701 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 290
+2026-10-26 01:59:40,701 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:59:40,701 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 64852.0 , 21063.0
+2026-10-26 01:59:40,701 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (968)
+2026-10-26 01:59:40,701 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[899, 971, 970, 968]]
+2026-10-26 01:59:41,918 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 291
+2026-10-26 01:59:41,918 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:59:41,918 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 34906.0 , 24767.0
+2026-10-26 01:59:41,918 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (902)
+2026-10-26 01:59:41,918 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[968, 969, 902]]
+2026-10-26 01:59:43,054 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 292
+2026-10-26 01:59:43,054 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:59:43,054 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 43838.0 , 31326.0
+2026-10-26 01:59:43,054 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Building (934)
+2026-10-26 01:59:43,054 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[902, 934]]
+2026-10-26 01:59:44,195 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 293
+2026-10-26 01:59:44,195 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:59:44,195 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 29914.0 , 52287.0
+2026-10-26 01:59:44,195 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (273)
+2026-10-26 01:59:44,195 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[934, 902, 273]]
+2026-10-26 01:59:45,405 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 294
+2026-10-26 01:59:45,405 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:59:45,405 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 38486.0 , 52004.0
+2026-10-26 01:59:45,405 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Building (935)
+2026-10-26 01:59:45,405 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[273, 903, 935]]
+2026-10-26 01:59:46,528 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 295
+2026-10-26 01:59:46,528 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:59:46,528 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 29910.0 , 59107.0
+2026-10-26 01:59:46,528 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (273)
+2026-10-26 01:59:46,528 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[935, 903, 273]]
+2026-10-26 01:59:47,657 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 296
+2026-10-26 01:59:47,657 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:59:47,657 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 33546.0 , 50490.0
+2026-10-26 01:59:47,657 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (903)
+2026-10-26 01:59:47,657 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[273, 903]]
+2026-10-26 01:59:48,875 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 297
+2026-10-26 01:59:48,875 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:59:48,875 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 33479.0 , 49332.0
+2026-10-26 01:59:48,875 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (903)
+2026-10-26 01:59:48,875 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[903, 273, 902]]
+2026-10-26 01:59:50,029 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 298
+2026-10-26 01:59:50,029 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:59:50,029 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 35121.0 , 24524.0
+2026-10-26 01:59:50,029 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (902)
+2026-10-26 01:59:50,029 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[903, 273, 902]]
+2026-10-26 01:59:51,160 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 299
+2026-10-26 01:59:51,160 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:59:51,160 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 43838.0 , 31329.0
+2026-10-26 01:59:51,160 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Building (934)
+2026-10-26 01:59:51,160 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[902, 934]]
+2026-10-26 01:59:52,285 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Time: 300
+2026-10-26 01:59:52,285 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastTarget: null
+2026-10-26 01:59:52,285 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current position: 45160.0 , 19910.0
+2026-10-26 01:59:52,285 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] Current area: Road (969)
+2026-10-26 01:59:52,285 [DEBUG|ActionExtTransport/482151809|SEUExtActionTransport] LastAction: ActionMove [usePosition=false, posX=0, posY=0, path=[934, 902, 969]]

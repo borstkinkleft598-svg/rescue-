@@ -64,6 +64,8 @@ public class SEUFBHumanDetector extends HumanDetector {
     public HumanDetector calc() {
         FireBrigade fireBrigade = (FireBrigade) this.agentInfo.me();
         if (fireBrigade.isBuriednessDefined() && fireBrigade.getBuriedness() > 0) {
+            this.result = null;
+            SEUFBHumanService.confirmLDcopTarget(null);
             return this;
         }
         Set<SEUFBHuman> seenCivilian = new HashSet<>();
@@ -88,8 +90,16 @@ public class SEUFBHumanDetector extends HumanDetector {
             objects.addAll(seenCivilian);
             this.result = objects.first().getHuman().getID();
         } else {
-            this.result = SEUFBHumanService.getTargetByDistance();
+            this.result = SEUFBHumanService.getTargetByLDcop();
+            if (this.result == null) {
+                this.result = SEUFBHumanService.getTargetByDistance();
+                if (this.result != null && SEUFBHumanService.isLayeredSchedulingEnabled()) {
+                    System.out.println("[LDCOP-FALLBACK] time=" + agentInfo.getTime() + " agent=" + agentInfo.getID()
+                            + " role=RESCUE reason=no_feasible_plan target=" + this.result);
+                }
+            }
         }
+        SEUFBHumanService.confirmLDcopTarget(this.result);
         return this;
     }
 

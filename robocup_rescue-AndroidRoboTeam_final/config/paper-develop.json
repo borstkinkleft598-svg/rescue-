@@ -1,0 +1,13 @@
+{
+  "Paper.enabled": true,
+  "Paper.dcopBaseline": false,
+  "Paper.bmsIterations": 32,
+  "Paper.maxTasks": 0,
+  "Paper.unservedPenalty": 10000,
+  "Paper.defaultDamage": 20,
+  "Paper.speed": 31445,
+  "LDcop.enabled": false,
+  "LDcop.layeredScheduling": false,
+  "ActionFireRescue.rest": 100,
+  "ActionTransport.rest": 100
+}

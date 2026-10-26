@@ -1399,25 +1399,21 @@ public class SEUExtActionClearOld extends ExtAction {
         }
         final EntityID start = this.getNonnullPosition(from);
         final EntityID end = this.getNonnullPosition(dest);
-        if (start == null || end == null) {
-            return new ArrayList<>();
-        }
 
         this.pathPlanning.setFrom(start);
         this.pathPlanning.setDestination(end);
         this.pathPlanning.calc();
         List<EntityID> path = this.pathPlanning.getResult();
-        if (path == null || path.isEmpty()) {
-            return new ArrayList<>();
+        if (path == null) {
+            path = new ArrayList<>();
         }
-        path = new ArrayList<>(path);
 
-        if (!path.getLast().equals(end)) {
-            return new ArrayList<>();
-        }
         if (isFull) {
-            if (!path.getFirst().equals(start)) {
+            if (path.isEmpty() || !path.getFirst().equals(start)) {
                 path.addFirst(start);
+            }
+            if (!path.getLast().equals(end)) {
+                path.add(end);
             }
         }
 
@@ -1460,12 +1456,8 @@ public class SEUExtActionClearOld extends ExtAction {
     private EntityID getNonnullPosition(EntityID entityID) {
         StandardEntity se = this.worldInfo.getEntity(entityID);
 
-        if (se == null) {
-            return null;
-        }
         if (se instanceof Human || se.getStandardURN() == BLOCKADE) {
-            StandardEntity position = this.worldInfo.getPosition(entityID);
-            return position == null ? null : position.getID();
+            return this.worldInfo.getPosition(entityID).getID();
         }
         return entityID;
     }

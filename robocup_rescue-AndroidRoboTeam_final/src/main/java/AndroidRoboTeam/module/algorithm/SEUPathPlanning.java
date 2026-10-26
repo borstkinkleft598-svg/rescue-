@@ -232,7 +232,7 @@ public class SEUPathPlanning extends PathPlanning {
 
     @Override
     public List<EntityID> getResult() {
-        return this.result == null ? null : new ArrayList<>(this.result);
+        return this.result;
     }
 
     @Override
@@ -243,26 +243,21 @@ public class SEUPathPlanning extends PathPlanning {
 
     @Override
     public PathPlanning setDestination(Collection<EntityID> targets) {
-        this.targets = new ArrayList<>();
-        if (targets == null) {
-            return this;
-        }
+        this.targets = new ArrayList<>(targets);
+        List<EntityID> toRemoves = new ArrayList<>();
+        List<EntityID> toAdd = new ArrayList<>();
+
         for (EntityID id : targets) {
-            if (id == null) {
-                continue;
-            }
             StandardEntity entity = worldInfo.getEntity(id);
-            EntityID areaID = null;
-            if (entity instanceof Area) {
-                areaID = entity.getID();
-            } else if (entity instanceof Human human && human.isPositionDefined()
-                    && worldInfo.getEntity(human.getPosition()) instanceof Area) {
-                areaID = human.getPosition();
-            }
-            if (areaID != null && !this.targets.contains(areaID)) {
-                this.targets.add(areaID);
+            if (!(entity instanceof Area)) {
+                if (entity instanceof Human) {
+                    toAdd.add(((Human) entity).getPosition());
+                    toRemoves.add(entity.getID());
+                }
             }
         }
+        this.targets.removeAll(toRemoves);
+        this.targets.addAll(toAdd);
         return this;
     }
 
@@ -318,13 +313,8 @@ public class SEUPathPlanning extends PathPlanning {
     @Override
     public PathPlanning calc() {
         this.result = null;
-        this.resultTarget = null;
-        StandardEntity sourceEntity = this.from == null ? null : worldInfo.getEntity(this.from);
-        if (!(sourceEntity instanceof Area sourceArea) || this.targets == null || this.targets.isEmpty()) {
-            return this;
-        }
-
         List<EntityID> planPath;
+        Area sourceArea = (Area) worldInfo.getEntity(from);
 
         if (previousTarget != null && targets.contains(previousTarget.getID())) {
             Area target = previousTarget;
@@ -338,10 +328,7 @@ public class SEUPathPlanning extends PathPlanning {
         if (result == null || result.isEmpty()) {
             targets.sort(new DistanceComparator(worldInfo, agentInfo));
             for (EntityID target1 : targets) {
-                StandardEntity targetEntity = worldInfo.getEntity(target1);
-                if (!(targetEntity instanceof Area target)) {
-                    continue;
-                }
+                Area target = (Area) worldInfo.getEntity(target1);
                 planPath = new ArrayList<>(getPath(sourceArea, target));
                 if (!planPath.isEmpty()) {
                     result = planPath;
@@ -351,7 +338,7 @@ public class SEUPathPlanning extends PathPlanning {
             }
         }
 
-        if (result != null && (result.isEmpty() || !result.getLast().equals(resultTarget))) {
+        if (result != null && result.isEmpty()) {
             result = null;
             resultTarget = null;
         }
@@ -360,11 +347,10 @@ public class SEUPathPlanning extends PathPlanning {
 
     private List<EntityID> getPath(Area sourceArea, Area target) {
         List<EntityID> path = new ArrayList<>();
-        if (sourceArea == null || target == null) {
+        if (target == null) {
             return path;
         }
         if (sourceArea.equals(target)) {
-            path.add(sourceArea.getID());
             return path;
         }
 
@@ -378,17 +364,20 @@ public class SEUPathPlanning extends PathPlanning {
 
                 path = getAreaPath(sourceArea, target, path);
             }
-            if (path.isEmpty() || !path.getFirst().equals(sourceArea.getID())
-                    || !path.getLast().equals(target.getID())) {
-                path.clear();
-            }
             previousTarget = target;
-            previousPath = new ArrayList<>(path);
+            previousPath = path;
         } else if (previousTarget.equals(target)) {
-            int sourceIndex = previousPath.indexOf(sourceArea.getID());
-            if (sourceIndex >= 0) {
-                path = new ArrayList<>(previousPath.subList(sourceIndex, previousPath.size()));
+
+            ArrayList<EntityID> temp = new ArrayList<>();
+            for (EntityID aPreviousPath : previousPath) {
+                if (!sourceArea.getID().equals(aPreviousPath)) {
+                    temp.add(aPreviousPath);
+                } else {
+                    break;
+                }
             }
+            previousPath.removeAll(temp);
+            path = previousPath;
         }
         return path;
     }
@@ -542,7 +531,8 @@ public class SEUPathPlanning extends PathPlanning {
                 //         + path.get(i + 1) + " 路径错误!!!");
                 // System.out.println("原始路径: " + path);
 
-                return new ArrayList<>(path.subList(0, i + 1));
+                path = path.subList(0, i + 1);
+                break;
             }
         }
         return path;

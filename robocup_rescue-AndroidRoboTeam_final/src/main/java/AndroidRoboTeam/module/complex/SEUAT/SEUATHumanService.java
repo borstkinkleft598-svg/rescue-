@@ -1,5 +1,8 @@
 package AndroidRoboTeam.module.complex.SEUAT;
 
+import AndroidRoboTeam.module.complex.common.LDcopTaskScheduler;
+import AndroidRoboTeam.module.complex.common.LDcopWorldPlanner;
+import AndroidRoboTeam.module.complex.common.LayeredRescuePlanner;
 import AndroidRoboTeam.world.SEUConstants;
 import AndroidRoboTeam.world.SEUWorldService;
 import adf.core.agent.communication.MessageManager;
@@ -46,6 +49,17 @@ public class SEUATHumanService extends AbstractModule {
 
     private int MAX_DISTANCE;
 
+    private final boolean ldcopEnabled;
+    private final boolean layeredScheduling;
+    private final LDcopWorldPlanner layeredPlanner;
+    private final int ldcopTargetLockTime;
+    private final int ldcopPreemptionMargin;
+    private final int ldcopLoadTime;
+    private final int ldcopUnloadTime;
+    private final int ldcopDefaultDamage;
+    private EntityID ldcopLockedTarget;
+    private int ldcopLockUntil;
+
     public SEUATHumanService(SEUWorldService SEUWorldService, AgentInfo ai, WorldInfo wi, ScenarioInfo si,
             ModuleManager moduleManager, DevelopData developData,
             Clustering clustering, PathPlanning pathPlanning) {
@@ -62,6 +76,17 @@ public class SEUATHumanService extends AbstractModule {
 
         this.MAX_DISTANCE = (int) (Math.sqrt(SEUWorldService.getMapHeight() * SEUWorldService.getMapWidth()
                 / si.getScenarioAgentsAt()) * 1.5);
+
+        this.ldcopEnabled = developData.getBoolean("LDcop.enabled", true);
+        this.layeredScheduling = developData.getBoolean("LDcop.layeredScheduling", true);
+        this.layeredPlanner = new LDcopWorldPlanner(ai, wi, pathPlanning, developData);
+        this.ldcopTargetLockTime = developData.getInteger("LDcop.targetLockTime", 5);
+        this.ldcopPreemptionMargin = developData.getInteger("LDcop.preemptionMargin", 4);
+        this.ldcopLoadTime = developData.getInteger("LDcop.loadTime", 1);
+        this.ldcopUnloadTime = developData.getInteger("LDcop.unloadTime", 1);
+        this.ldcopDefaultDamage = developData.getInteger("LDcop.defaultDamage", 20);
+        this.ldcopLockedTarget = null;
+        this.ldcopLockUntil = 0;
     }
 
     @Override
@@ -71,11 +96,13 @@ public class SEUATHumanService extends AbstractModule {
 
     @Override
     public AbstractModule updateInfo(MessageManager messageManager) {
-        super.updateInfo(messageManager);
+        this.layeredPlanner.update(messageManager);
+        if (this.messageManager == null) {
+            this.messageManager = messageManager;
+        }
         if (this.getCountUpdateInfo() >= 2) {
             return this;
         }
-        this.messageManager = messageManager;
         this.targetsCivilian.clear();
         this.notNeedBuilding.clear();
 
@@ -133,23 +160,28 @@ public class SEUATHumanService extends AbstractModule {
                 }
             }
 
-        }
+            if (changedSE instanceof FireBrigade) {
 
-        // Send after the complete change-set has been inspected. Delivery must not
-        // depend on whether a fire brigade or police force happened to be observed.
-        for (Civilian civilian : this.sendCivilian) {
-            if (civilian.isBuriednessDefined() && civilian.getBuriedness() > 0
-                    && civilian.isHPDefined() && civilian.getHP() > 0) {
-                messageManager.addMessage(new MessageCivilian(true, StandardMessagePriority.HIGH, civilian));
+                for (Civilian civilian : this.sendCivilian) {
+                    if (civilian.isBuriednessDefined() && civilian.getBuriedness() > 0
+                            && civilian.isHPDefined() && civilian.getHP() > 0) {
+
+                        messageManager.addMessage(
+                                new MessageCivilian(false, StandardMessagePriority.HIGH, civilian));
+                    }
+                }
+
+                sendCivilian.clear();
+            } else if (changedSE instanceof PoliceForce) {
+
+                for (EntityID entityID1 : this.sendCommandPolice) {
+                    messageManager.addMessage(
+                            new CommandPolice(false, StandardMessagePriority.HIGH, null,
+                                    entityID1, CommandPolice.ACTION_CLEAR));
+                }
+                this.sendCommandPolice.clear();
             }
         }
-        this.sendCivilian.clear();
-
-        for (EntityID targetArea : this.sendCommandPolice) {
-            messageManager.addMessage(new CommandPolice(true, StandardMessagePriority.HIGH, null,
-                    targetArea, CommandPolice.ACTION_CLEAR));
-        }
-        this.sendCommandPolice.clear();
 
         for (CommunicationMessage message : messageManager
                 .getReceivedMessageList(MessageCivilian.class)) {
@@ -311,13 +343,160 @@ public class SEUATHumanService extends AbstractModule {
         objects.addAll(this.targetsCivilian);
 
         for (Civilian civilian : objects) {
-            if (this.isReachable(civilian)) {
+            if (this.isReachable(civilian) && allowsFallback(civilian)) {
                 target = civilian.getID();
                 break;
             }
 
         }
         return target;
+    }
+
+    /**
+     * Rolling L-DCOP selection for the ambulance layer. Buried humans are
+     * represented as RESCUE candidates with a predecessor wait; unburied
+     * humans are TRANSPORT candidates. In both cases the candidate is accepted
+     * only when loading, transport and unloading can finish before death.
+     */
+    public EntityID getTargetByLDcop() {
+        if (!this.ldcopEnabled) {
+            return null;
+        }
+        if (this.layeredScheduling) {
+            return this.layeredPlanner.select(LayeredRescuePlanner.Role.TRANSPORT, this.messageManager);
+        }
+
+        int now = this.agentInfo.getTime();
+        List<LDcopTaskScheduler.Candidate> candidates = new ArrayList<>();
+        for (Civilian civilian : this.targetsCivilian) {
+            if (!this.isHumanAliveAndLocated(civilian)) {
+                continue;
+            }
+
+            int travelTime = this.estimateTravelTime(
+                    this.agentInfo.getPosition(), civilian.getPosition());
+            if (travelTime == Integer.MAX_VALUE) {
+                continue;
+            }
+
+            int rescueWait = civilian.isBuriednessDefined() && civilian.getBuriedness() > 0
+                    ? this.estimateRemainingRescueTime(civilian)
+                    : 0;
+            int transportTime = this.estimateTransportTime(civilian.getPosition());
+            int latestFinish = this.estimateLatestFinish(civilian, now);
+            LDcopTaskScheduler.Layer layer = rescueWait > 0
+                    ? LDcopTaskScheduler.Layer.RESCUE
+                    : LDcopTaskScheduler.Layer.TRANSPORT;
+
+            candidates.add(new LDcopTaskScheduler.Candidate(
+                    civilian.getID(),
+                    layer,
+                    travelTime,
+                    rescueWait + this.ldcopLoadTime,
+                    transportTime + this.ldcopUnloadTime,
+                    latestFinish,
+                    true));
+        }
+
+        LDcopTaskScheduler.Selection selection = LDcopTaskScheduler.select(
+                candidates,
+                this.ldcopLockedTarget,
+                this.ldcopLockUntil,
+                now,
+                this.ldcopTargetLockTime,
+                this.ldcopPreemptionMargin);
+        if (selection == null) {
+            this.ldcopLockedTarget = null;
+            this.ldcopLockUntil = 0;
+            return null;
+        }
+
+        this.ldcopLockedTarget = selection.target();
+        this.ldcopLockUntil = selection.lockUntil();
+        return selection.target();
+    }
+
+    public boolean isLayeredSchedulingEnabled() {
+        return this.ldcopEnabled && this.layeredScheduling;
+    }
+
+    private boolean allowsFallback(Civilian human) {
+        return !isLayeredSchedulingEnabled() || layeredPlanner.allowsFallback(
+                LayeredRescuePlanner.Role.TRANSPORT, human.getID());
+    }
+    public void confirmLDcopTarget(EntityID target) {
+        if (isLayeredSchedulingEnabled()) layeredPlanner.confirmTarget(
+                LayeredRescuePlanner.Role.TRANSPORT, target, messageManager);
+    }
+
+    private boolean isHumanAliveAndLocated(Civilian civilian) {
+        return civilian != null
+                && civilian.isHPDefined()
+                && civilian.getHP() > 0
+                && civilian.isPositionDefined()
+                && !(this.worldInfo.getEntity(civilian.getPosition()) instanceof Refuge);
+    }
+
+    private int estimateTravelTime(EntityID from, EntityID destination) {
+        if (from == null || destination == null) {
+            return Integer.MAX_VALUE;
+        }
+        if (from.equals(destination)) {
+            return 0;
+        }
+        List<EntityID> path = this.pathPlanning.setFrom(from)
+                .setDestination(destination).calc().getResult();
+        if (path == null || path.isEmpty()) {
+            return Integer.MAX_VALUE;
+        }
+        double distance = this.pathPlanning.getDistance();
+        return Math.max(1, (int) Math.ceil(distance / SEUConstants.MEAN_VELOCITY_OF_MOVING));
+    }
+
+    private int estimateRemainingRescueTime(Civilian civilian) {
+        Set<EntityID> rescuers = new HashSet<>();
+        for (CommunicationMessage cm : this.messageManager.getReceivedMessageList(MessageFireBrigade.class)) {
+            MessageFireBrigade message = (MessageFireBrigade) cm;
+            if (message.getAction() == MessageFireBrigade.ACTION_RESCUE
+                    && civilian.getID().equals(message.getTargetID())) {
+                rescuers.add(message.getAgentID());
+            }
+        }
+        for (StandardEntity entity : this.worldInfo.getEntitiesOfType(StandardEntityURN.FIRE_BRIGADE)) {
+            FireBrigade rescueAgent = (FireBrigade) entity;
+            if (rescueAgent.isPositionDefined()
+                    && rescueAgent.getPosition().equals(civilian.getPosition())) {
+                rescuers.add(rescueAgent.getID());
+            }
+        }
+        int buriedness = civilian.isBuriednessDefined() ? civilian.getBuriedness() : 0;
+        return rescuers.isEmpty()
+                ? Integer.MAX_VALUE / 4
+                : Math.max(1, (int) Math.ceil((double) buriedness / rescuers.size()));
+    }
+
+    private int estimateTransportTime(EntityID civilianPosition) {
+        int minimumDistance = Integer.MAX_VALUE;
+        for (EntityID refuge : this.worldInfo.getEntityIDsOfType(StandardEntityURN.REFUGE)) {
+            int distance = this.worldInfo.getDistance(civilianPosition, refuge);
+            if (distance >= 0) {
+                minimumDistance = Math.min(minimumDistance, distance);
+            }
+        }
+        if (minimumDistance == Integer.MAX_VALUE) {
+            return 0;
+        }
+        return Math.max(1,
+                (int) Math.ceil((double) minimumDistance / SEUConstants.MEAN_VELOCITY_OF_MOVING));
+    }
+
+    private int estimateLatestFinish(Civilian civilian, int now) {
+        int damage = civilian.isDamageDefined() && civilian.getDamage() > 0
+                ? civilian.getDamage()
+                : Math.max(1, this.ldcopDefaultDamage);
+        int remainingLife = Math.max(1,
+                (int) Math.ceil((double) civilian.getHP() / damage));
+        return now + remainingLife;
     }
 
     public EntityID getTargetByTimeAndBuriedness() {
@@ -349,7 +528,7 @@ public class SEUATHumanService extends AbstractModule {
         objects.addAll(targetSet);
         int repeat = 0;
         for (Civilian civilian : objects) {
-            if (this.isReachable(civilian) && repeat < 50) {
+            if (this.isReachable(civilian) && repeat < 50 && allowsFallback(civilian)) {
                 target = civilian.getID();
                 break;
             }

@@ -122,7 +122,7 @@ public class SEUWorldService extends AbstractModule {
         emptyBuildings = new HashSet<>();
         availableHydrants = new HashSet<>();
         stuckAgents = new HashSet<>();
-        commandManager = SEUCommandManager.getInstance(agentInfo.getID());
+        commandManager = new SEUCommandManager();
         SEUBlockadeMap = new HashMap<>();
         SEUBuildingMap = new HashMap<>();
         SEURoadMap = new HashMap<>();

@@ -140,4 +140,15 @@ public class SEUFBHuman {
         return arriveTime;
     }
 
+    public int getEstimatedRescueTime() {
+        if (!this.human.isBuriednessDefined() || this.human.getBuriedness() <= 0) {
+            return 0;
+        }
+        int rescuersAtTarget = this.numOfFireBrigade == null ? 0 : this.numOfFireBrigade;
+        int announcedRescuers = this.numOfRescueFireBrigade == null ? 0 : this.numOfRescueFireBrigade;
+        int expectedRescuers = Math.max(1, Math.max(rescuersAtTarget, announcedRescuers + 1));
+        return Math.max(1,
+                (int) Math.ceil((double) this.human.getBuriedness() / expectedRescuers));
+    }
+
 }

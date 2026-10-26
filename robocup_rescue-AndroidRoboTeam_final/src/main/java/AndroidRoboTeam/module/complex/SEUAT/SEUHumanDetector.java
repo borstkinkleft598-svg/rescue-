@@ -68,6 +68,15 @@ public class SEUHumanDetector extends HumanDetector {
 
     @Override
     public HumanDetector calc() {
+        // The layered policy handles same-area pickups on roads as well as buildings,
+        // ready-passenger priority, and already-loaded vehicles in one consistent path.
+        if (SEUATHumanService.isLayeredSchedulingEnabled()) {
+            result = SEUATHumanService.getTargetByLDcop();
+            if (result == null && agentInfo.someoneOnBoard() == null) result = SEUATHumanService.getTargetByDistance();
+            if (result == null && agentInfo.someoneOnBoard() == null) result = SEUATHumanService.getTargetByTimeAndBuriedness();
+            SEUATHumanService.confirmLDcopTarget(result);
+            return this;
+        }
         Set<EntityID> changedEntities = this.worldInfo.getChanged().getChangedEntities();
         StandardEntity myPosEntity = this.worldInfo.getPosition((Human) this.agentInfo.me());
         if (myPosEntity instanceof Building && !(myPosEntity instanceof Refuge)) {
@@ -89,6 +98,7 @@ public class SEUHumanDetector extends HumanDetector {
                                 && this.isHumanNeedTransport(civilian)) {
 
                             this.result = civilian.getID();
+                            SEUATHumanService.confirmLDcopTarget(this.result);
                             return this;
                         }
                     }
@@ -96,10 +106,20 @@ public class SEUHumanDetector extends HumanDetector {
             }
         }
 
-        result = SEUATHumanService.getTargetByDistance();
+        // Local loading opportunities retain priority over speculative remote queues.
+        result = SEUATHumanService.getTargetByLDcop();
+        boolean fallback = result == null && SEUATHumanService.isLayeredSchedulingEnabled();
+        if (result == null) {
+            result = SEUATHumanService.getTargetByDistance();
+        }
         if (result == null) {
             result = SEUATHumanService.getTargetByTimeAndBuriedness();
         }
+        if (fallback && result != null) {
+            System.out.println("[LDCOP-FALLBACK] time=" + agentInfo.getTime() + " agent=" + agentInfo.getID()
+                    + " role=TRANSPORT reason=no_feasible_plan target=" + result);
+        }
+        SEUATHumanService.confirmLDcopTarget(this.result);
         return this;
     }
 

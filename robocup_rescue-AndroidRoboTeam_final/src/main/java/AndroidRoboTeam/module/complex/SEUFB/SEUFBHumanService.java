@@ -1,5 +1,9 @@
 package AndroidRoboTeam.module.complex.SEUFB;
 
+import AndroidRoboTeam.module.complex.common.LDcopTaskScheduler;
+import AndroidRoboTeam.module.complex.common.LDcopWorldPlanner;
+import AndroidRoboTeam.module.complex.common.LayeredRescuePlanner;
+import AndroidRoboTeam.world.SEUConstants;
 import adf.core.agent.communication.MessageManager;
 import adf.core.agent.communication.standard.bundle.MessageUtil;
 import adf.core.agent.communication.standard.bundle.StandardMessage;
@@ -20,7 +24,9 @@ import adf.core.component.module.algorithm.PathPlanning;
 import rescuecore2.standard.entities.AmbulanceTeam;
 import rescuecore2.standard.entities.Civilian;
 import rescuecore2.standard.entities.Human;
+import rescuecore2.standard.entities.Refuge;
 import rescuecore2.standard.entities.StandardEntity;
+import rescuecore2.standard.entities.StandardEntityURN;
 import rescuecore2.worldmodel.EntityID;
 
 import java.util.*;
@@ -44,6 +50,16 @@ public class SEUFBHumanService extends AbstractModule {
     private Set<SEUFBHuman> removeHuman;
     private Set<Civilian> sendCivilian;
     private Set<Civilian> notNeedSendCivilian;
+    private final boolean ldcopEnabled;
+    private final boolean layeredScheduling;
+    private final LDcopWorldPlanner layeredPlanner;
+    private MessageManager latestMessages;
+    private final int ldcopTargetLockTime;
+    private final int ldcopPreemptionMargin;
+    private final int ldcopLoadTime;
+    private final int ldcopUnloadTime;
+    private EntityID ldcopLockedTarget;
+    private int ldcopLockUntil;
 
     public SEUFBHumanService(AgentInfo ai, WorldInfo wi, ScenarioInfo si, ModuleManager moduleManager,
             DevelopData developData, Clustering clustering, PathPlanning pathPlanning) {
@@ -60,6 +76,15 @@ public class SEUFBHumanService extends AbstractModule {
         this.secondLevelCivilian = new HashSet<>();
         this.sendCivilian = new HashSet<>();
         this.notNeedSendCivilian = new HashSet<>();
+        this.ldcopEnabled = developData.getBoolean("LDcop.enabled", true);
+        this.layeredScheduling = developData.getBoolean("LDcop.layeredScheduling", true);
+        this.layeredPlanner = new LDcopWorldPlanner(ai, wi, pathPlanning, developData);
+        this.ldcopTargetLockTime = developData.getInteger("LDcop.targetLockTime", 5);
+        this.ldcopPreemptionMargin = developData.getInteger("LDcop.preemptionMargin", 4);
+        this.ldcopLoadTime = developData.getInteger("LDcop.loadTime", 1);
+        this.ldcopUnloadTime = developData.getInteger("LDcop.unloadTime", 1);
+        this.ldcopLockedTarget = null;
+        this.ldcopLockUntil = 0;
     }
 
     @Override
@@ -69,7 +94,8 @@ public class SEUFBHumanService extends AbstractModule {
 
     @Override
     public AbstractModule updateInfo(MessageManager messageManager) {
-        super.updateInfo(messageManager);
+        this.latestMessages = messageManager;
+        this.layeredPlanner.update(messageManager);
         if (this.getCountUpdateInfo() >= 2) {
             return this;
         }
@@ -79,17 +105,7 @@ public class SEUFBHumanService extends AbstractModule {
         firstLevelCivilian.clear();
         secondLevelCivilian.clear();
         removeHuman.clear();
-        sendCivilian.clear();
-        notNeedSendCivilian.clear();
         Set<EntityID> changed = this.agentInfo.getChanged().getChangedEntities();
-        Set<EntityID> ambulancePositions = new HashSet<>();
-        for (EntityID entityID : changed) {
-            StandardEntity entity = this.worldInfo.getEntity(entityID);
-            if (entity instanceof AmbulanceTeam ambulanceTeam && ambulanceTeam.isPositionDefined()) {
-                ambulancePositions.add(ambulanceTeam.getPosition());
-            }
-        }
-
         for (EntityID entityID : changed) {
             StandardEntity entity = this.worldInfo.getEntity(entityID);
             if (entity instanceof Human && !this.allHuman.containsKey(entityID)) {
@@ -102,8 +118,12 @@ public class SEUFBHumanService extends AbstractModule {
                 }
             }
             if (entity instanceof Civilian civilian) {
-                if (civilian.isPositionDefined() && ambulancePositions.contains(civilian.getPosition())) {
-                    this.notNeedSendCivilian.add(civilian);
+                for (EntityID entityID1 : changed) {
+                    StandardEntity standardEntity = this.worldInfo.getEntity(entityID1);
+                    if (standardEntity instanceof AmbulanceTeam
+                            && ((AmbulanceTeam) standardEntity).getPosition().equals(civilian.getPosition())) {
+                        this.notNeedSendCivilian.add(civilian);
+                    }
                 }
                 if (civilian.isBuriednessDefined() && civilian.getBuriedness() == 0 && civilian.isDamageDefined()
                         && civilian.getDamage() > 0 && civilian.isHPDefined() && civilian.getHP() > 0) {
@@ -113,19 +133,19 @@ public class SEUFBHumanService extends AbstractModule {
                     this.sendCivilian.add(civilian);
                 }
             }
-        }
-
-        // Broadcast actionable civilians after scanning every changed entity so the
-        // result is independent of HashSet iteration order and local AT visibility.
-        for (Civilian civilian : this.sendCivilian) {
-            if (!this.notNeedSendCivilian.contains(civilian)
-                    && civilian.isBuriednessDefined() && civilian.getBuriedness() == 0
-                    && civilian.isDamageDefined() && civilian.getDamage() > 0
-                    && civilian.isHPDefined() && civilian.getHP() > 0) {
-                messageManager.addMessage(new MessageCivilian(true, StandardMessagePriority.HIGH, civilian));
+            if (entity instanceof AmbulanceTeam) {
+                for (Civilian civilian : this.sendCivilian) {
+                    if (this.notNeedSendCivilian.contains(civilian)) {
+                        continue;
+                    }
+                    if (civilian.isBuriednessDefined() && civilian.getBuriedness() == 0 && civilian.isDamageDefined()
+                            && civilian.getDamage() > 0 && civilian.isHPDefined() && civilian.getHP() > 0) {
+                        messageManager.addMessage(new MessageCivilian(false, StandardMessagePriority.HIGH, civilian));
+                    }
+                }
+                sendCivilian.clear();
             }
         }
-        this.sendCivilian.clear();
 
         for (CommunicationMessage message : messageManager
                 .getReceivedMessageList(MessageCivilian.class, MessageFireBrigade.class, MessagePoliceForce.class,
@@ -184,31 +204,117 @@ public class SEUFBHumanService extends AbstractModule {
         EntityID target = null;
         TreeSet<SEUFBHuman> objects3 = new TreeSet<>(
                 ((o1, o2) -> Double.compare(o2.getValue(), o1.getValue())));
-        objects3.addAll(this.topLevelCivilian);
+        objects3.addAll(this.topLevelCivilian.stream().filter(this::allowsFallback).toList());
         if (!objects3.isEmpty()) {
             target = objects3.first().getHuman().getID();
             return target;
         }
         TreeSet<SEUFBHuman> objects = new TreeSet<>(
                 ((o1, o2) -> Double.compare(o2.getValue(), o1.getValue())));
-        objects.addAll(this.firstLevelCivilian);
+        objects.addAll(this.firstLevelCivilian.stream().filter(this::allowsFallback).toList());
         if (!objects.isEmpty()) {
             target = objects.first().getHuman().getID();
             return target;
         }
         TreeSet<SEUFBHuman> objects1 = new TreeSet<>(
                 ((o1, o2) -> Double.compare(o2.getValue(), o1.getValue())));
-        objects1.addAll(this.secondLevelCivilian);
+        objects1.addAll(this.secondLevelCivilian.stream().filter(this::allowsFallback).toList());
         if (!objects1.isEmpty()) {
             target = objects1.first().getHuman().getID();
         }
         TreeSet<SEUFBHuman> objects2 = new TreeSet<>(
                 ((o1, o2) -> Double.compare(o2.getValue(), o1.getValue())));
-        objects2.addAll(this.targetHumans);
+        objects2.addAll(this.targetHumans.stream().filter(this::allowsFallback).toList());
         if (!objects2.isEmpty()) {
             target = objects2.first().getHuman().getID();
         }
         return target;
+    }
+
+    /**
+     * Rescue-layer selection. The follow-up transport estimate represents the
+     * ordering edge rescue -> load/transport, so a human is selected only when
+     * both layers are expected to finish within the survival time window.
+     */
+    public EntityID getTargetByLDcop() {
+        if (!this.ldcopEnabled) {
+            return null;
+        }
+        if (this.layeredScheduling) {
+            return this.layeredPlanner.select(LayeredRescuePlanner.Role.RESCUE, this.latestMessages);
+        }
+
+        int now = this.agentInfo.getTime();
+        List<LDcopTaskScheduler.Candidate> candidates = new ArrayList<>();
+        for (SEUFBHuman rescueHuman : this.targetHumans) {
+            Human human = rescueHuman.getHuman();
+            if (human == null || !human.isHPDefined() || human.getHP() <= 0
+                    || !human.isPositionDefined()) {
+                continue;
+            }
+
+            int travelTime = Math.max(0, (int) Math.ceil(rescueHuman.getArriveTime()));
+            int rescueTime = rescueHuman.getEstimatedRescueTime();
+            int transportTime = human instanceof Civilian
+                    ? this.estimateTransportTime(human.getPosition())
+                            + this.ldcopLoadTime + this.ldcopUnloadTime
+                    : 0;
+            int latestFinish = now + Math.max(1, (int) Math.floor(rescueHuman.getDeadTime()));
+
+            candidates.add(new LDcopTaskScheduler.Candidate(
+                    human.getID(),
+                    LDcopTaskScheduler.Layer.RESCUE,
+                    travelTime,
+                    rescueTime,
+                    transportTime,
+                    latestFinish,
+                    rescueHuman.isReachable()));
+        }
+
+        LDcopTaskScheduler.Selection selection = LDcopTaskScheduler.select(
+                candidates,
+                this.ldcopLockedTarget,
+                this.ldcopLockUntil,
+                now,
+                this.ldcopTargetLockTime,
+                this.ldcopPreemptionMargin);
+        if (selection == null) {
+            this.ldcopLockedTarget = null;
+            this.ldcopLockUntil = 0;
+            return null;
+        }
+
+        this.ldcopLockedTarget = selection.target();
+        this.ldcopLockUntil = selection.lockUntil();
+        return selection.target();
+    }
+
+    public boolean isLayeredSchedulingEnabled() {
+        return this.ldcopEnabled && this.layeredScheduling;
+    }
+
+    private boolean allowsFallback(SEUFBHuman human) {
+        return !isLayeredSchedulingEnabled() || layeredPlanner.allowsFallback(
+                LayeredRescuePlanner.Role.RESCUE, human.getHuman().getID());
+    }
+    public void confirmLDcopTarget(EntityID target) {
+        if (isLayeredSchedulingEnabled()) layeredPlanner.confirmTarget(
+                LayeredRescuePlanner.Role.RESCUE, target, latestMessages);
+    }
+
+    private int estimateTransportTime(EntityID humanPosition) {
+        int minimumDistance = Integer.MAX_VALUE;
+        for (EntityID refuge : this.worldInfo.getEntityIDsOfType(StandardEntityURN.REFUGE)) {
+            int distance = this.worldInfo.getDistance(humanPosition, refuge);
+            if (distance >= 0) {
+                minimumDistance = Math.min(minimumDistance, distance);
+            }
+        }
+        if (minimumDistance == Integer.MAX_VALUE) {
+            return 0;
+        }
+        return Math.max(1,
+                (int) Math.ceil((double) minimumDistance / SEUConstants.MEAN_VELOCITY_OF_MOVING));
     }
 
 }

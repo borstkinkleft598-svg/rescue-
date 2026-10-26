@@ -1,4 +1,0 @@
-jdk:
-  - openjdk21
-install:
-  - ./gradlew publishToMavenLocal -Dmaven.repo.local=$HOME/.m2/repository
